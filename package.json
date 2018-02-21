@@ -17,17 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SethDonohue/portfolio"
+    "url": "git+https://github.com/SethDonohue/portfolio.git"
   },
   "keywords": [
     "portfolio",
     "react"
   ],
   "author": "Seth Donohue",
-  "license": "NONE",
-  "bugs": {
-    "url": "https"
-  },
+  "license": "UNLICENSED",
   "homepage": "https://github.com/sethdonohue/portfolio#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -72,5 +69,8 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
     "jest": "^22.1.4"
+  },
+  "bugs": {
+    "url": "https://github.com/SethDonohue/portfolio/issues"
   }
 }
