@@ -8,14 +8,12 @@ import { AppBar } from 'material-ui';
 import Landing from '../landing';
 import AuthRedirect from '../auth-redirect';
 import NavWrapper from '../material-ui/nav-wrapper';
-import { setSocketAction } from '../../action/socket';
-import { getSavedRoomsAction } from '../../action/savedRooms';
 
 import './_app.scss';
 
 class App extends Component {
   // componentWillMount() {
-    // this.props.socketConnect();
+  // this.props.socketConnect();
   // }
 
   // componentDidMount() {
@@ -47,9 +45,7 @@ const mapStateToProps = state => ({
   token: state.token,
 });
 
-const mapDispatchToProps = dispatch => ({
-  socketConnect: () => dispatch(setSocketAction(dispatch)),
-  getSavedRooms: (token) => dispatch(getSavedRoomsAction(token)),
-}); 
+// const mapDispatchToProps = dispatch => ({
+// }); 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);

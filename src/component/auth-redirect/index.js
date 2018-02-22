@@ -8,17 +8,17 @@ class AuthRedirect extends Component {
   render() {
     const { location, history } = this.props;
     const { pathname } = location;
-    let destinationRoute = null;
+    const destinationRoute = null;
 
-    if (pathname === '/room') {
+    // if (pathname === '/room') {
     //   if (!room) destinationRoute = '/';
     // } else if (pathname === '/') {
     //   if (room) destinationRoute = '/room';
     // } else if (room) {
     //   destinationRoute = '/room';
-    } else {
-      destinationRoute = '/';
-    }
+    // } else {
+    //   destinationRoute = '/';
+    // }
 
     return (
       <div className="auth-redirect">
