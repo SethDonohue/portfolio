@@ -1,5 +1,14 @@
 @import '_vars';
 
+a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      text-decoration: underline;
+      font-weight: bold;  
+    }
+}
+
 .header {
   .container-fluid {
     display: flex;
@@ -168,12 +177,10 @@
 
 @media screen and (min-width: 60em) {
  .grid {
-  display: grid;
-  grid-template-columns: 1fr minmax(2fr, 50em) 1fr;
   grid-template-rows: 20em;
   grid-gap: 2rem;
   margin-top: 5em;
-  padding-bottom: 7em;
+  padding-bottom: 2em;
   grid-template-areas: 
     "left center right";
   }
@@ -218,16 +225,8 @@
 }
 
 .footer {
-  margin-top: 5em;
+  margin-top: 3em;
+  margin-bottom: 5em;
   text-align: center;
-  a {
-    text-decoration: none;
-    color: black;
-    &:hover {
-      text-decoration: underline;
-      font-weight: bold;  
-    }
-  }
-
 }
 
