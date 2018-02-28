@@ -1,8 +1,13 @@
 require('dotenv').config();
+
 const express = require('express');
 const favicon = require('serve-favicon');
 
+const secure = require('ssl-express-www');
+
 const app = express();
+
+app.use(secure);
 
 app.use(favicon(`${__dirname}/favicon.ico`));
 app.use(express.static(`${__dirname}/build`));
