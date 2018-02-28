@@ -34,6 +34,5 @@ export const loginAction = (user) => (store) =>
     .withCredentials()
     .then(({ text }) => {
       store.dispatch(setTokenAction(text));
-      store.dispatch(getSavedRoomsAction(text));
     })
     .catch(log);
