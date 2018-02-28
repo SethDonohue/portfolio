@@ -8,7 +8,7 @@ const secure = require('ssl-express-www');
 
 const app = express();
 
-app.use(secure);
+// app.use(secure);
 
 app.use(favicon(`${__dirname}/favicon.ico`));
 app.use(express.static(`${__dirname}/build`));
