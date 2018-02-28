@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const favicon = require('serve-favicon');
 
+// ssl-express-www forces SSL on all pages
 const secure = require('ssl-express-www');
 
 const app = express();
