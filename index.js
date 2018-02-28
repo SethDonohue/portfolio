@@ -1,10 +1,5 @@
 require('dotenv').config();
 
-const host = 'www.sethdonohue.com';
-if ((host === window.location.host) && (window.location.protocol !== 'https:')) {
-  window.location.protocol = 'https';
-}
-
 const express = require('express');
 const favicon = require('serve-favicon');
 
