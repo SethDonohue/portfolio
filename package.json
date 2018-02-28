@@ -51,6 +51,7 @@
     "resolve-url-loader": "^2.2.1",
     "sass-loader": "^6.0.6",
     "serve-favicon": "^2.4.5",
+    "ssl-express-www": "^1.0.20",
     "style-loader": "^0.20.1",
     "superagent": "^3.8.2",
     "uglifyjs-webpack-plugin": "^1.1.8",

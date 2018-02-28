@@ -11,16 +11,7 @@ import NavWrapper from '../material-ui/nav-wrapper';
 
 import './_app.scss';
 
-class App extends Component {
-  // componentWillMount() {
-  // this.props.socketConnect();
-  // }
-
-  // componentDidMount() {
-  //   const { token } = this.props;
-  //   if (token) this.props.getSavedRooms(token);
-  // }
-  
+class App extends Component {  
   render() {
     return (
       <Fragment>

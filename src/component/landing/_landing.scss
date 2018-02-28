@@ -144,24 +144,6 @@ a {
   }
 }
 
-.create-join {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-    .socket-room {
-      width: 50%;
-
-    @media only screen and (min-width: 600px) {
-      width: 100%;
-    }
-  }
-  p {
-    color: $primary-red;
-  }
-}
-
 .grid {  
   margin-top: 2em;
   img {
