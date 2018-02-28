@@ -13,14 +13,7 @@ class Landing extends Component {
     signingUp: false,
     loggingIn: false,
   };
-
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.room) this.props.history.push('/room');
-  //   if (nextProps.loggedIn) {
-  //     this.setState(this.emptyState);
-  //   }
-  // }
-
+  
   emptyState = { ...this.state };
 
   render() {
