@@ -110,7 +110,7 @@ class Landing extends Component {
               </p>
 
               <p className="feature-desc">Noncents was built in 5 days and allows for multiple servers to mine for blocks and get their block validated by the main chain verification server hosted on Heroku.
-                It uses JavaScript, MongoDB, and RESTful API practices to implement all of the features.
+              It uses JavaScript, MongoDB, and RESTful API practices to implement all of the features.
               </p>
 
               <p>Live Raw Chain: <a href="http://noncents.herokuapp.com/chain">http://noncents.herokuapp.com/chain</a></p>
