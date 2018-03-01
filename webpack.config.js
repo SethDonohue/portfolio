@@ -12,7 +12,7 @@ const PRODUCTION = process.env.NODE_ENV === 'production';
 webpackConfig.entry = `${__dirname}/src/main.js`;
 webpackConfig.output = {
   filename: 'bundle.[hash].js',
-  path: `${__dirname}/build`,
+  path: `${__dirname}/`,
   publicPath: process.env.CDN_URL,
 };
 
