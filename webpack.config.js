@@ -10,11 +10,20 @@ const webpackConfig = module.exports = {};
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
 webpackConfig.entry = `${__dirname}/src/main.js`;
-webpackConfig.output = {
-  filename: 'bundle.[hash].js',
-  path: `${__dirname}/build`,
-  publicPath: process.env.CDN_URL,
-};
+
+// if (PRODUCTION) {
+//   webpackConfig.output = {
+//     filename: 'bundle.[hash].js',
+//     path: `${__dirname}/build/build`,
+//     publicPath: process.env.CDN_URL,
+//   };
+// } else {
+  webpackConfig.output = {
+    filename: 'bundle.[hash].js',
+    path: `${__dirname}/build`,
+    publicPath: process.env.CDN_URL,
+  };  
+// }
 
 webpackConfig.plugins = [
   new HTMLPlugin({
