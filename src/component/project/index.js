@@ -31,7 +31,7 @@ class Project extends Component {
 
     return (
       <div className="project-item">
-        <img className="screenshot" src={this.state.imgSrc} alt="{this.state.altText}" height="250px" width="250px" />
+        <img className="screenshot" src={this.state.imgSrc} alt="{this.state.altText}" />
       
         <ul className="feature-list">
           <li 
@@ -42,9 +42,12 @@ class Project extends Component {
             onFocus={featureOneImgSrcSet}
             onBlur={defaultMouseOut}
           > 
-
-            <img className="feature-img" src={this.state.featureSrc} alt="" />
-            <p> Feature One Lorem IpsumFeature One Lorem IpsumFeature One Lorem IpsumFeature One Lorem IpsumFeature One Lorem IpsumFeature One Lorem IpsumFeature One Lorem Ipsum </p>
+            <p>
+              <img className="feature-img" src={this.state.featureSrc} alt="" />
+              Feature One Lorem IpsumFeature One Lorem IpsumFeature 
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
+              IpsumFeature One Lorem IpsumFeature One Lorem Ipsum 
+            </p>
           </li>
 
           <li 
@@ -55,9 +58,12 @@ class Project extends Component {
             onFocus={featureTwoImgSrcSet}
             onBlur={defaultMouseOut}
           > 
-
-            <img className="feature-img" src={this.state.featureSrc} alt="" />
-            <p> Feature Two </p>
+            <p>
+              <img className="feature-img" src={this.state.featureSrc} alt="" />
+              Feature 2 Lorem IpsumFeature One Lorem IpsumFeature
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem
+              IpsumFeature One Lorem IpsumFeature One Lorem Ipsum
+            </p>
           </li>
 
           <li 
@@ -68,9 +74,12 @@ class Project extends Component {
             onFocus={featureThreeImgSrcSet}
             onBlur={defaultMouseOut}
           > 
-
-            <img className="feature-img" src={this.state.featureSrc} alt="" />
-            <p> Feature Three </p>
+            <p>
+              <img className="feature-img" src={this.state.featureSrc} alt="" />
+              Feature 3 Lorem IpsumFeature One Lorem IpsumFeature
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem
+              IpsumFeature One Lorem IpsumFeature One Lorem Ipsum
+            </p>
           </li>
 
         </ul>
