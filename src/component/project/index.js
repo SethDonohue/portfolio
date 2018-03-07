@@ -2,74 +2,79 @@ import React, { Component, Fragment } from 'react';
 
 import './_project.scss';
 
+import image1 from '../../image/project1ss1.png';
+import image2 from '../../image/project1ss2.png';
+import image3 from '../../image/project1ss3.png';
+import image4 from '../../image/project1ss4.png';
+import analyticsImg from '../../image/analytics.png';
+
 class Project extends Component {
   state = {
-    imgSrc: '../../image/stars.png',
-  }
-  handleMouseOver() {
-    const getTarget = (event) => {
-      const hoveredFeatureId = event.target.attr('id');
-      console.log(hoveredFeatureId);
-      return hoveredFeatureId;
-    };
-
-    switch (getTarget()) {
-      case 'featureOne':
-        this.setState({
-          imgSrc: this.props.properties.screenshots[1].src,
-        });
-        break;
-      
-      case 'featureTwo':
-        this.setState({
-          imgSrc: this.props.properties.screenshots[2].src,
-        });
-        break;
-      
-      case 'featureThree':
-        this.setState({
-          imgSrc: this.props.properties.screenshots[3].src,
-        });
-        break;
-      
-      default:
-        this.setState({
-          imgSrc: this.props.properties.screenshots[0].src,
-        });
-    }
+    imgSrc: image1,
+    featureSrc: analyticsImg,
   }
 
-  handleMouseOut() {
-    this.setState({
-      imgSrc: this.props.properties.screenshot[0].src,
-    });
-  }
+  // getTarget = (event) => {
+  //   const hoveredFeatureId = event.target.attr('id');
+  //   console.log(hoveredFeatureId);
+  //   return hoveredFeatureId;
+  // }
 
   render() {
-    // const {
-    //   properties,
-    //   defaultFeature,
-    // } = this.props;
+    // These are defined for multiple uses for OnMouseOver & onFocus for
+    // Accessability as determined by a11y standards (https://a11yproject.com/)
+
+    const defaultMouseOut = () => { this.setState({ imgSrc: image1 }); };
+    const featureOneImgSrcSet = () => { this.setState({ imgSrc: image2 }); };
+    const featureTwoImgSrcSet = () => { this.setState({ imgSrc: image3 }); };
+    const featureThreeImgSrcSet = () => { this.setState({ imgSrc: image4 }); };
 
     return (
-      <li>
-        <img src={this.state.imgSrc} alt={this.state.altText} height="250px" width="250px" />
+      <div className="project-item">
+        <img className="screenshot" src={this.state.imgSrc} alt="{this.state.altText}" height="250px" width="250px" />
       
         <ul className="feature-list">
-          <li className="feature" id="featureOne" onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut}> 
-            <img className="feature-img" src="../../image/analytics.png" alt="" />
-            <p> Feature One </p>
+          <li 
+            className="feature"
+            id="featureOne"
+            onMouseOver={featureOneImgSrcSet}
+            onMouseOut={defaultMouseOut}
+            onFocus={featureOneImgSrcSet}
+            onBlur={defaultMouseOut}
+          > 
+
+            <img className="feature-img" src={this.state.featureSrc} alt="" />
+            <p> Feature One Lorem IpsumFeature One Lorem IpsumFeature One Lorem IpsumFeature One Lorem IpsumFeature One Lorem IpsumFeature One Lorem IpsumFeature One Lorem Ipsum </p>
           </li>
-          <li className="feature" id="featureTwo" onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut}> 
-            <img className="feature-img" src="/src/image/analytics.png" alt="" />
+
+          <li 
+            className="feature"
+            id="featureTwo"
+            onMouseOver={featureTwoImgSrcSet}
+            onMouseOut={defaultMouseOut}
+            onFocus={featureTwoImgSrcSet}
+            onBlur={defaultMouseOut}
+          > 
+
+            <img className="feature-img" src={this.state.featureSrc} alt="" />
             <p> Feature Two </p>
           </li>
-          <li className="feature" id="featureThree" onMouseOver={this.handleMouseOver} onMouseOut={this.handleMouseOut}> 
-            <img className="feature-img" src="/src/image/analytics.png" alt="" />
+
+          <li 
+            className="feature"
+            id="featureThree"
+            onMouseOver={featureThreeImgSrcSet}
+            onMouseOut={defaultMouseOut}
+            onFocus={featureThreeImgSrcSet}
+            onBlur={defaultMouseOut}
+          > 
+
+            <img className="feature-img" src={this.state.featureSrc} alt="" />
             <p> Feature Three </p>
           </li>
+
         </ul>
-      </li>
+      </div>
     );
   }
 }

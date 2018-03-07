@@ -12,9 +12,9 @@ import './_landing.scss';
 
 const defaultState = {
   projects: [
-    { screenshots: ['../../image/project1ss1.png', '../../image/project1ss2.png', '../../image/project1ss3.png', '../../image/project1ss4.png'] }, 
-    { screenshots: ['../../image/project2ss1.png', '../../image/project2ss2.png', '../../image/project2ss3.png', '../../image/project1ss4.png'] }, 
-    { screenshots: ['../../image/project3ss1.png', '../../image/project3ss2.png', '../../image/project3ss3.png', '../../image/project1ss4.png'] }, 
+    { screenshots: ['/src/image/project1ss1.png', '/src/image/project1ss2.png', '/src/image/project1ss3.png', '/src/image/project1ss4.png'] }, 
+    { screenshots: ['/src/image/project2ss1.png', '/src/image/project2ss2.png', '/src/image/project2ss3.png', '/src/image/project1ss4.png'] }, 
+    { screenshots: ['/src/image/project3ss1.png', '/src/image/project3ss2.png', '/src/image/project3ss3.png', '/src/image/project1ss4.png'] }, 
   ],
   signingUp: false,
   loggingIn: false,
