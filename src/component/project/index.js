@@ -31,58 +31,57 @@ class Project extends Component {
 
     return (
       <div className="project-item">
-        <img className="screenshot" src={this.state.imgSrc} alt="{this.state.altText}" />
-      
-        <ul className="feature-list">
-          <li 
-            className="feature"
-            id="featureOne"
-            onMouseOver={featureOneImgSrcSet}
-            onMouseOut={defaultMouseOut}
-            onFocus={featureOneImgSrcSet}
-            onBlur={defaultMouseOut}
-          > 
-            <p>
-              <img className="feature-img" src={this.state.featureSrc} alt="" />
-              Feature One Lorem IpsumFeature One Lorem IpsumFeature 
+        <div className="container">
+          <img className="element" src={this.state.imgSrc} alt="" />
+        </div>
+        <div className="container">       
+          <ul className="feature-list">
+            <li 
+              className="feature"
+              id="featureOne"
+              onMouseOut={defaultMouseOut}
+              onMouseOver={featureOneImgSrcSet}
+              onFocus={featureOneImgSrcSet}
+              onBlur={defaultMouseOut}
+            > 
+              <p>
+                <img className="feature-img" src={this.state.featureSrc} alt="" />
+              Feature 1 Lorem IpsumFeature One Lorem IpsumFeature 
               One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
-              IpsumFeature One Lorem IpsumFeature One Lorem Ipsum 
-            </p>
-          </li>
+              </p>
+            </li>
 
-          <li 
-            className="feature"
-            id="featureTwo"
-            onMouseOver={featureTwoImgSrcSet}
-            onMouseOut={defaultMouseOut}
-            onFocus={featureTwoImgSrcSet}
-            onBlur={defaultMouseOut}
-          > 
-            <p>
-              <img className="feature-img" src={this.state.featureSrc} alt="" />
+            <li 
+              className="feature"
+              id="featureTwo"
+              onMouseOver={featureTwoImgSrcSet}
+              onMouseOut={defaultMouseOut}
+              onFocus={featureTwoImgSrcSet}
+              onBlur={defaultMouseOut}
+            > 
+              <p>
+                <img className="feature-img" src={this.state.featureSrc} alt="" />
               Feature 2 Lorem IpsumFeature One Lorem IpsumFeature
               One Lorem IpsumFeature One Lorem IpsumFeature One Lorem
-              IpsumFeature One Lorem IpsumFeature One Lorem Ipsum
-            </p>
-          </li>
+              </p>
+            </li>
 
-          <li 
-            className="feature"
-            id="featureThree"
-            onMouseOver={featureThreeImgSrcSet}
-            onMouseOut={defaultMouseOut}
-            onFocus={featureThreeImgSrcSet}
-            onBlur={defaultMouseOut}
-          > 
-            <p>
-              <img className="feature-img" src={this.state.featureSrc} alt="" />
+            <li 
+              className="feature"
+              id="featureThree"
+              onMouseOver={featureThreeImgSrcSet}
+              onMouseOut={defaultMouseOut}
+              onFocus={featureThreeImgSrcSet}
+              onBlur={defaultMouseOut}
+            > 
+              <p>
+                <img className="feature-img" src={this.state.featureSrc} alt="" />            
               Feature 3 Lorem IpsumFeature One Lorem IpsumFeature
               One Lorem IpsumFeature One Lorem IpsumFeature One Lorem
-              IpsumFeature One Lorem IpsumFeature One Lorem Ipsum
-            </p>
-          </li>
-
-        </ul>
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }
