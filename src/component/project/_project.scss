@@ -4,101 +4,56 @@
 
 .project-item {
   height: 500px;
-  max-width: 960px;
-  text-align: center;
-  position: relative;
-  font: 0/0a;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(3, 33%);
+  align-items: center;
 }
 
-.project-item:before {
-  content: ' ';
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
+.screenshot {
+  width: 95%;
+  grid-row: 1 / span 3;
+  transition: all 0.5s ease;
 }
-
-// .image-helper {
-//   // position: relative;
-//   // height: 50%;
-//   width: 45%;
-//   line-height: 50vh;
-//   float: left;
-// }
-
-// .screenshot {
-//   display: inline-block;
-//   vertical-align: middle;  
-//   font: 16px/1;
-//   // float: left;
-//   width: 30%;
-//   // transition: all 0.5s ease;
-// }
 
 .feature-list {
-  display: inline-block;
-  // right: 1px;
   width: 95%;
+  grid-row: 1 / span 3;
+  transition: all 0.5s ease;
   margin: 0;
-  height: 100%; 
-  position: relative;
-  list-style: none;
   padding: 0;
-  vertical-align: middle;  /* vertical alignment of the inline element */  
+  height: 100%; 
 }
 
 .feature {
+  display: grid;
+  align-items: center;  
   height: 33%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   list-style: none;
   transition: all 0.5s ease-in-out;
   p {
+    grid-row: 1 / span 1;
     margin: 0.5vw 0 0.5vw 0.5vw;
     padding: 0.5vw;
     text-align: left;
+  }
+  img {
+  grid-row: 1 / span 1;
+  transition: all 0.5s ease;
+  margin: 0.5vw 1vw 0.5vw 0;
+  // margin-top: 0.5vw;
+  float: left;
+  // width: 25%;
+  height: 75%;
   }
 }
 
 .feature:hover {
   // font-size: 115%;
+  transform: scale(1.15);  
   color: white;
-}
-
-.feature:hover .feature-img {
-  transform: scale(1.15);
-  // border: solid 4px red;
-  // border-radius: 10px;
-}
-
-.feature-img {
-  transition: all 0.5s ease;
-  margin: 0.5vw 1vw 0.5vw 0;
-  // margin-top: 0.5vw;
-  float: left;
-  width: 25%;
-  height: 100%;
-}
-
-
-.container {
-    height: 100%;
-    text-align: center;  /* align the inline(-block) elements horizontally */
-    // font: 0/0 a;         /* remove the gap between inline(-block) elements */
-    // background-color: white;
-    width: 49.5%;
-    float: left;
-    // right: 0px;
-}
-
-.container:before {    /* create a full-height inline block pseudo=element */
-    content: ' ';
-    display: inline-block;
-    vertical-align: middle;  /* vertical alignment of the inline element */
-    height: 100%;
-}
-
-.element {
-    display: inline-block;
-    vertical-align: middle;  /* vertical alignment of the inline element */
-    // font: 16px/1 Arial sans-serif;        /* <-- reset the font property */
-    width: 95%;
-    
 }
