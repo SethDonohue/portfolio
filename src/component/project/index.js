@@ -8,11 +8,14 @@ import image3 from '../../image/project1ss3.png';
 import image4 from '../../image/project1ss4.png';
 import analyticsImg from '../../image/analytics.png';
 import socketImg from '../../image/socket-io.png';
+import starsImg from '../../image/stars.png';
 
 class Project extends Component {
   state = {
     imgSrc: image1,
-    featureSrc: analyticsImg,
+    featureOneSrc: analyticsImg,
+    featureTwoSrc: starsImg,
+    featureThreeSrc: socketImg,
   }
 
   // getTarget = (event) => {
@@ -27,25 +30,27 @@ class Project extends Component {
     const defaultMouseOut = () => {
       this.setState({
         imgSrc: image1,
-        featureSrc: analyticsImg,
+        featureOneSrc: analyticsImg,
+        featureTwoSrc: starsImg,
+        featureThreeSrc: socketImg,
       });
     };
     const featureOneImgSrcSet = () => {
       this.setState({
         imgSrc: image2,
-        featureSrc: socketImg,
+        featureOneSrc: socketImg,
       });
     };
     const featureTwoImgSrcSet = () => {
       this.setState({
         imgSrc: image3,
-        featureSrc: socketImg,
+        featureTwoSrc: socketImg,
       });
     };
     const featureThreeImgSrcSet = () => {
       this.setState({
         imgSrc: image4,
-        featureSrc: socketImg,
+        featureThreeSrc: analyticsImg,
       });
     };
 
@@ -62,9 +67,10 @@ class Project extends Component {
             onFocus={featureOneImgSrcSet}
             onBlur={defaultMouseOut}
           > 
-            <img className="feature-img" src={this.state.featureSrc} alt="" />
+            <img className="feature-img" src={this.state.featureOneSrc} alt="" />
             <p>
-              Feature 1 Lorem IpsumFeature One Lorem IpsumFeature 
+              <h3> TitleTitleTitle </h3>
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
               One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
             </p>
           </li>
@@ -77,10 +83,11 @@ class Project extends Component {
             onFocus={featureTwoImgSrcSet}
             onBlur={defaultMouseOut}
           > 
-            <img className="feature-img" src={this.state.featureSrc} alt="" />
+            <img className="feature-img" src={this.state.featureTwoSrc} alt="" />
             <p>
-              Feature 2 Lorem IpsumFeature One Lorem IpsumFeature
-              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem
+              <h3> TitleTitleTitle </h3>
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
             </p>
           </li>
 
@@ -92,10 +99,11 @@ class Project extends Component {
             onFocus={featureThreeImgSrcSet}
             onBlur={defaultMouseOut}
           > 
-            <img className="feature-img" src={this.state.featureSrc} alt="" />            
+            <img className="feature-img" src={this.state.featureThreeSrc} alt="" />            
             <p>
-              Feature 3 Lorem IpsumFeature One Lorem IpsumFeature
-              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem
+              <h3> TitleTitleTitle </h3>
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
             </p>
           </li>
         </ul>

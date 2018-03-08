@@ -157,7 +157,7 @@ a {
  .grid {
   grid-template-rows: 20em;
   grid-gap: 2rem;
-  margin-top: 5em;
+  // margin-top: 5em;
   padding-bottom: 2em;
   grid-template-areas: 
     "left center right";
@@ -172,6 +172,8 @@ a {
 .feature-left {
   grid-area: left;
   text-align: center;
+  padding: 0.1vw;
+  margin: 10vw 0;
   // p {
   //   padding: 0 1em;
   // }
@@ -183,6 +185,8 @@ a {
 .feature-center {
   grid-area: center;
   text-align: center;
+  padding: 0.1vw;  
+  margin: 10vw 0;  
   // p {
   //   padding: 0 1em;
   // }
@@ -194,6 +198,8 @@ a {
 .feature-right {
   grid-area: right;
   text-align: center;
+  padding: 0.1vw;
+  margin: 10vw 0;  
   // p {
   //   padding: 0 1em;
   // }
