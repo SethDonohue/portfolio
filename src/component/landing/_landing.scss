@@ -146,10 +146,6 @@ a {
 
 .grid {  
   margin-top: 2em;
-  img {
-    max-width: 200px;
-    height: auto;
-  }
 }
 
 .grid > * {
@@ -161,7 +157,7 @@ a {
  .grid {
   grid-template-rows: 20em;
   grid-gap: 2rem;
-  margin-top: 5em;
+  // margin-top: 5em;
   padding-bottom: 2em;
   grid-template-areas: 
     "left center right";
@@ -176,34 +172,40 @@ a {
 .feature-left {
   grid-area: left;
   text-align: center;
-  p {
-    padding: 0 1em;
-  }
-  img {
-    width: 100%;
-  }
+  padding: 0.1vw;
+  margin: 10vw 0;
+  // p {
+  //   padding: 0 1em;
+  // }
+  // img {
+  //   width: 100%;
+  // }
 }
 
 .feature-center {
   grid-area: center;
   text-align: center;
-  p {
-    padding: 0 1em;
-  }
-  img {
-    width: 100%;
-  }
+  padding: 0.1vw;  
+  margin: 10vw 0;  
+  // p {
+  //   padding: 0 1em;
+  // }
+  // img {
+  //   width: 100%;
+  // }
 }
 
 .feature-right {
   grid-area: right;
   text-align: center;
-  p {
-    padding: 0 1em;
-  }
-  img {
-    width: 100%;
-  }
+  padding: 0.1vw;
+  margin: 10vw 0;  
+  // p {
+  //   padding: 0 1em;
+  // }
+  // img {
+  //   width: 100%;
+  // }
 }
 
 .footer {

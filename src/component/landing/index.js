@@ -3,16 +3,25 @@ import React, { Component, Fragment } from 'react';
 import { RaisedButton, TextField } from 'material-ui';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 
+import Project from '../project';
+
 import AuthForm from '../auth-form';
 import { signupAction, loginAction, logoutAction } from '../../action/auth';
 
 import './_landing.scss';
 
+const defaultState = {
+  projects: [
+    { screenshots: ['/src/image/project1ss1.png', '/src/image/project1ss2.png', '/src/image/project1ss3.png', '/src/image/project1ss4.png'] }, 
+    { screenshots: ['/src/image/project2ss1.png', '/src/image/project2ss2.png', '/src/image/project2ss3.png', '/src/image/project1ss4.png'] }, 
+    { screenshots: ['/src/image/project3ss1.png', '/src/image/project3ss2.png', '/src/image/project3ss3.png', '/src/image/project1ss4.png'] }, 
+  ],
+  signingUp: false,
+  loggingIn: false,
+};
+
 class Landing extends Component {
-  state = {
-    signingUp: false,
-    loggingIn: false,
-  };
+  state = defaultState;
   
   emptyState = { ...this.state };
 
@@ -72,8 +81,11 @@ class Landing extends Component {
 
           <div className="grid">
             <div className="feature-left">
-              <img src="https://i.imgur.com/wfvLvuq.png" alt="Real Time" />
-              <h2><a href="http://www.firepolls.com">Firepolls</a></h2>
+              <h1> Project Title </h1>            
+              <Project properties={this.state.projects[0]} />
+              {/*
+                <img src="https://i.imgur.com/wfvLvuq.png" alt="Real Time" />
+              <h1><a href="http://www.firepolls.com">Firepolls</a></h1>
               <h4>Feb 2018 – Feb 2018</h4>
               <p className="feature-desc">This is a school oriented app that allows for quick,
                 anonymous, opinion polling on any topic.
@@ -92,26 +104,40 @@ class Landing extends Component {
                 Material UI, Artillery (Load Testing), Jest (Test Driven Development),
                 Webpack, Express, Node.
               </p>
+            */}
+
             </div>
             <div className="feature-center">
+              <h1> Project Title </h1>                        
+              <Project properties={this.state.projects[2]} />
+              
+              {/*
               <img src="https://i.imgur.com/RLqWOTH.png" alt="Analytics" />
-              <h2><a href="https://github.com/HashMoney/Noncents">Noncents</a></h2>
+              <h1><a href="https://github.com/HashMoney/Noncents">Noncents</a></h1>
               <h4>Jan 2018 – Jan 2018</h4>
 
               <p className="feature-desc">A purely back-end Blockchain project with persistent chain storage and peer-to-peer mining,
                 it is mainly a JavaScript experiment to build, understand and deploy a blockchain.
               </p>
 
-              <p className="feature-desc">Noncents was built in 5 days and allows for multiple servers to mine for blocks and get their block validated by the main chain verification server hosted on Heroku.
-              It uses JavaScript, MongoDB, and RESTful API practices to implement all of the features.
+              <p className="feature-desc">Noncents was built in 5 days and allows for
+              multiple servers to mine for blocks and get their block validated by the
+              main chain verification server hosted on Heroku.
+              It uses JavaScript, MongoDB, and RESTful API practices to implement all
+              of the features.
               </p>
 
               <p>Live Raw Chain: <a href="http://noncents.herokuapp.com/chain">http://noncents.herokuapp.com/chain</a></p>
               <p>GitHub Repo: <a href="https://github.com/HashMoney/Noncents">https://github.com/HashMoney/Noncents</a></p>
+              */}
             </div>
             <div className="feature-right">
+              <h1> Project Title </h1>            
+              <Project properties={this.state.projects[2]} />
+            
+              {/*
               <img src="https://i.imgur.com/DwpqLpv.png" alt="Anonymous Voting" />
-              <h2><a href="https://sethdonohue.github.io/layout-generator/">Layout Generator</a></h2>
+              <h1><a href="https://sethdonohue.github.io/layout-generator/">Layout Generator</a></h1>
               <h4>Dec 2017 – Dec 2017</h4>
 
               <p className="feature-desc">Layout Generator allows a user to follow a simple flow through the website, choose a layout colors/background, and get all the HTML, CSS and JS code required to use the template for their own website.
@@ -121,6 +147,7 @@ class Landing extends Component {
 
               <p>Live Site: <a href="https://sethdonohue.github.io/layout-generator/">https://sethdonohue.github.io/layout-generator/</a></p>
               <p>GitHub Repo: <a href="https://github.com/SethDonohue/layout-generator">https://github.com/SethDonohue/layout-generator</a></p>
+              */}              
             </div>
           </div>
           <footer className="footer">
