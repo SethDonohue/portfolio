@@ -119,7 +119,7 @@ class Landing extends Component {
               <p className="feature-desc">A purely back-end Blockchain project with persistent chain storage and peer-to-peer mining,
                 it is mainly a JavaScript experiment to build, understand and deploy a blockchain.
               </p>
-
+              
               <p className="feature-desc">Noncents was built in 5 days and allows for
               multiple servers to mine for blocks and get their block validated by the
               main chain verification server hosted on Heroku.
