@@ -81,10 +81,11 @@ class Landing extends Component {
 
           <div className="grid">
             <div className="feature-left">
+              <h1> Project Title </h1>            
               <Project properties={this.state.projects[0]} />
               {/*
                 <img src="https://i.imgur.com/wfvLvuq.png" alt="Real Time" />
-              <h2><a href="http://www.firepolls.com">Firepolls</a></h2>
+              <h1><a href="http://www.firepolls.com">Firepolls</a></h1>
               <h4>Feb 2018 – Feb 2018</h4>
               <p className="feature-desc">This is a school oriented app that allows for quick,
                 anonymous, opinion polling on any topic.
@@ -107,11 +108,12 @@ class Landing extends Component {
 
             </div>
             <div className="feature-center">
+              <h1> Project Title </h1>                        
               <Project properties={this.state.projects[2]} />
               
               {/*
               <img src="https://i.imgur.com/RLqWOTH.png" alt="Analytics" />
-              <h2><a href="https://github.com/HashMoney/Noncents">Noncents</a></h2>
+              <h1><a href="https://github.com/HashMoney/Noncents">Noncents</a></h1>
               <h4>Jan 2018 – Jan 2018</h4>
 
               <p className="feature-desc">A purely back-end Blockchain project with persistent chain storage and peer-to-peer mining,
@@ -130,11 +132,12 @@ class Landing extends Component {
               */}
             </div>
             <div className="feature-right">
+              <h1> Project Title </h1>            
               <Project properties={this.state.projects[2]} />
             
               {/*
               <img src="https://i.imgur.com/DwpqLpv.png" alt="Anonymous Voting" />
-              <h2><a href="https://sethdonohue.github.io/layout-generator/">Layout Generator</a></h2>
+              <h1><a href="https://sethdonohue.github.io/layout-generator/">Layout Generator</a></h1>
               <h4>Dec 2017 – Dec 2017</h4>
 
               <p className="feature-desc">Layout Generator allows a user to follow a simple flow through the website, choose a layout colors/background, and get all the HTML, CSS and JS code required to use the template for their own website.

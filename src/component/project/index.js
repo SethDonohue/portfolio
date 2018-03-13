@@ -7,11 +7,15 @@ import image2 from '../../image/project1ss2.png';
 import image3 from '../../image/project1ss3.png';
 import image4 from '../../image/project1ss4.png';
 import analyticsImg from '../../image/analytics.png';
+import socketImg from '../../image/socket-io.png';
+import starsImg from '../../image/stars.png';
 
 class Project extends Component {
   state = {
     imgSrc: image1,
-    featureSrc: analyticsImg,
+    featureOneSrc: analyticsImg,
+    featureTwoSrc: starsImg,
+    featureThreeSrc: socketImg,
   }
 
   // getTarget = (event) => {
@@ -23,30 +27,51 @@ class Project extends Component {
   render() {
     // These are defined for multiple uses for OnMouseOver & onFocus for
     // Accessability as determined by a11y standards (https://a11yproject.com/)
-
-    const defaultMouseOut = () => { this.setState({ imgSrc: image1 }); };
-    const featureOneImgSrcSet = () => { this.setState({ imgSrc: image2 }); };
-    const featureTwoImgSrcSet = () => { this.setState({ imgSrc: image3 }); };
-    const featureThreeImgSrcSet = () => { this.setState({ imgSrc: image4 }); };
+    const defaultMouseOut = () => {
+      this.setState({
+        imgSrc: image1,
+        featureOneSrc: analyticsImg,
+        featureTwoSrc: starsImg,
+        featureThreeSrc: socketImg,
+      });
+    };
+    const featureOneImgSrcSet = () => {
+      this.setState({
+        imgSrc: image2,
+        featureOneSrc: socketImg,
+      });
+    };
+    const featureTwoImgSrcSet = () => {
+      this.setState({
+        imgSrc: image3,
+        featureTwoSrc: socketImg,
+      });
+    };
+    const featureThreeImgSrcSet = () => {
+      this.setState({
+        imgSrc: image4,
+        featureThreeSrc: analyticsImg,
+      });
+    };
 
     return (
       <div className="project-item">
-        <img className="screenshot" src={this.state.imgSrc} alt="{this.state.altText}" />
-      
+        <img className="screenshot" src={this.state.imgSrc} alt="" />
+        
         <ul className="feature-list">
           <li 
             className="feature"
             id="featureOne"
-            onMouseOver={featureOneImgSrcSet}
             onMouseOut={defaultMouseOut}
+            onMouseOver={featureOneImgSrcSet}
             onFocus={featureOneImgSrcSet}
             onBlur={defaultMouseOut}
           > 
+            <img className="feature-img" src={this.state.featureOneSrc} alt="" />
             <p>
-              <img className="feature-img" src={this.state.featureSrc} alt="" />
-              Feature One Lorem IpsumFeature One Lorem IpsumFeature 
+              <h3> TitleTitleTitle </h3>
               One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
-              IpsumFeature One Lorem IpsumFeature One Lorem Ipsum 
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
             </p>
           </li>
 
@@ -58,11 +83,11 @@ class Project extends Component {
             onFocus={featureTwoImgSrcSet}
             onBlur={defaultMouseOut}
           > 
+            <img className="feature-img" src={this.state.featureTwoSrc} alt="" />
             <p>
-              <img className="feature-img" src={this.state.featureSrc} alt="" />
-              Feature 2 Lorem IpsumFeature One Lorem IpsumFeature
-              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem
-              IpsumFeature One Lorem IpsumFeature One Lorem Ipsum
+              <h3> TitleTitleTitle </h3>
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
             </p>
           </li>
 
@@ -74,14 +99,13 @@ class Project extends Component {
             onFocus={featureThreeImgSrcSet}
             onBlur={defaultMouseOut}
           > 
+            <img className="feature-img" src={this.state.featureThreeSrc} alt="" />            
             <p>
-              <img className="feature-img" src={this.state.featureSrc} alt="" />
-              Feature 3 Lorem IpsumFeature One Lorem IpsumFeature
-              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem
-              IpsumFeature One Lorem IpsumFeature One Lorem Ipsum
+              <h3> TitleTitleTitle </h3>
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
+              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
             </p>
           </li>
-
         </ul>
       </div>
     );
