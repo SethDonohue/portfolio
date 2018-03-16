@@ -9,6 +9,8 @@ import Landing from '../landing';
 import AuthRedirect from '../auth-redirect';
 import NavWrapper from '../material-ui/nav-wrapper';
 
+import '../../assets/background-path';
+
 import './_app.scss';
 
 class App extends Component {  
