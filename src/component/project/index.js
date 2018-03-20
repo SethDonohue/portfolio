@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './_project.scss';
 
@@ -16,6 +17,10 @@ class Project extends Component {
     featureOneSrc: analyticsImg,
     featureTwoSrc: starsImg,
     featureThreeSrc: socketImg,
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
   }
 
   // getTarget = (event) => {
@@ -53,16 +58,27 @@ class Project extends Component {
         featureThreeSrc: analyticsImg,
       });
     };
+    console.log(`Project Rendered`);
 
     return (
       <div className="project-item">
-        <img className="screenshot" src={this.state.imgSrc} alt="" />
+      
+        <ReactCSSTransitionGroup
+          component="div"
+          transitionName="fade"
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={0}
+          transitionLeave={false}
+        >
+          <img className="screenshot" src={this.state.imgSrc} key={this.state.imgSrc} alt="" />
+        </ReactCSSTransitionGroup>
+        
         
         <ul className="feature-list">
           <li 
             className="feature"
             id="featureOne"
-            onMouseOut={defaultMouseOut}
+            onMouseLeave={defaultMouseOut}
             onMouseOver={featureOneImgSrcSet}
             onFocus={featureOneImgSrcSet}
             onBlur={defaultMouseOut}
@@ -79,7 +95,7 @@ class Project extends Component {
             className="feature"
             id="featureTwo"
             onMouseOver={featureTwoImgSrcSet}
-            onMouseOut={defaultMouseOut}
+            onMouseLeave={defaultMouseOut}
             onFocus={featureTwoImgSrcSet}
             onBlur={defaultMouseOut}
           > 
@@ -95,7 +111,7 @@ class Project extends Component {
             className="feature"
             id="featureThree"
             onMouseOver={featureThreeImgSrcSet}
-            onMouseOut={defaultMouseOut}
+            onMouseLeave={defaultMouseOut}
             onFocus={featureThreeImgSrcSet}
             onBlur={defaultMouseOut}
           > 

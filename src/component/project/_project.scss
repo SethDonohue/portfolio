@@ -5,13 +5,18 @@
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(3, 33%);
   align-items: center;
+  span {
+    display: grid;
+  }
 }
 
 .screenshot {
-  border: solid .75vw black;
-  border-radius: 4vw;
-  width: 90%;
+  border: solid 5px black;
+  border-radius: 25px;
+  width: 75%;
   grid-row: 1 / span 3;
+  margin: 0 15% 0 5%;
+  position: relative;
   // transition: all 0.5s ease;
 }
 
@@ -49,12 +54,13 @@
   // margin-top: 0.5vw;
   float: left;
   // width: 25%;
-  height: 75%;
+  width: 75%;
+  // border: solid black 5px;
   }
 }
 
 .feature:hover {
   // font-size: 115%;
-  transform: scale(1.15);  
+  transform: scale(1.25);  
   color: white;
 }
