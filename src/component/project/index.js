@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './_project.scss';
 
@@ -12,7 +13,8 @@ import starsImg from '../../image/stars.png';
 
 class Project extends Component {
   state = {
-    imgSrc: image1,
+    screenshotOneClass: 'screenshot',
+    screenshotTwoClass: 'screenshot fadeOut',
     featureOneSrc: analyticsImg,
     featureTwoSrc: starsImg,
     featureThreeSrc: socketImg,
@@ -29,42 +31,56 @@ class Project extends Component {
     // Accessability as determined by a11y standards (https://a11yproject.com/)
     const defaultMouseOut = () => {
       this.setState({
-        imgSrc: image1,
+        screenshotTwoClass: 'screenshot fadeOut',
+        screenshotThreeClass: 'screenshot fadeOut',
+        screenshotFourClass: 'screenshot fadeOut',
         featureOneSrc: analyticsImg,
         featureTwoSrc: starsImg,
         featureThreeSrc: socketImg,
       });
     };
-    const featureOneImgSrcSet = () => {
+    const featureTwoImgFadeIn = () => {
       this.setState({
-        imgSrc: image2,
+        screenshotTwoClass: 'screenshot fadeIn',
+        screenshotThreeClass: 'screenshot fadeOut',
+        screenshotFourClass: 'screenshot fadeOut',
         featureOneSrc: socketImg,
       });
     };
-    const featureTwoImgSrcSet = () => {
+    const featureThreeImgFadeIn = () => {
       this.setState({
-        imgSrc: image3,
+        screenshotTwoClass: 'screenshot fadeOut',
+        screenshotThreeClass: 'screenshot fadeIn',
+        screenshotFourClass: 'screenshot fadeOut',
         featureTwoSrc: socketImg,
       });
     };
-    const featureThreeImgSrcSet = () => {
+    const featureFourImgFadeIn = () => {
       this.setState({
-        imgSrc: image4,
+        screenshotOneClass: 'screenshot',
+        screenshotTwoClass: 'screenshot fadeOut',
+        screenshotThreeClass: 'screenshot fadeOut',
+        screenshotFourClass: 'screenshot fadeIn',
         featureThreeSrc: analyticsImg,
       });
     };
 
     return (
       <div className="project-item">
-        <img className="screenshot" src={this.state.imgSrc} alt="" />
+        <div className="screenshot-holder">
+          <img key={0} className={this.state.screenshotOneClass} src={image1} alt="" />
+          <img key={1} className={this.state.screenshotTwoClass} src={image2} alt="" />
+          <img key={2} className={this.state.screenshotThreeClass} src={image3} alt="" />
+          <img key={3} className={this.state.screenshotFourClass} src={image4} alt="" />
+        </div>
         
         <ul className="feature-list">
           <li 
             className="feature"
             id="featureOne"
             onMouseOut={defaultMouseOut}
-            onMouseOver={featureOneImgSrcSet}
-            onFocus={featureOneImgSrcSet}
+            onMouseOver={featureTwoImgFadeIn}
+            onFocus={featureTwoImgFadeIn}
             onBlur={defaultMouseOut}
           > 
             <img className="feature-img" src={this.state.featureOneSrc} alt="" />
@@ -78,9 +94,9 @@ class Project extends Component {
           <li 
             className="feature"
             id="featureTwo"
-            onMouseOver={featureTwoImgSrcSet}
+            onMouseOver={featureThreeImgFadeIn}
             onMouseOut={defaultMouseOut}
-            onFocus={featureTwoImgSrcSet}
+            onFocus={featureThreeImgFadeIn}
             onBlur={defaultMouseOut}
           > 
             <img className="feature-img" src={this.state.featureTwoSrc} alt="" />
@@ -94,9 +110,9 @@ class Project extends Component {
           <li 
             className="feature"
             id="featureThree"
-            onMouseOver={featureThreeImgSrcSet}
+            onMouseOver={featureFourImgFadeIn}
             onMouseOut={defaultMouseOut}
-            onFocus={featureThreeImgSrcSet}
+            onFocus={featureFourImgFadeIn}
             onBlur={defaultMouseOut}
           > 
             <img className="feature-img" src={this.state.featureThreeSrc} alt="" />            

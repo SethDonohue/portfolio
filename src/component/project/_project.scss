@@ -7,13 +7,37 @@
   align-items: center;
 }
 
-.screenshot {
-  border: solid .75vw black;
-  border-radius: 4vw;
-  width: 90%;
-  grid-row: 1 / span 3;
-  // transition: all 0.5s ease;
+.screenshot-holder {
+  display: grid;
+  grid-row: 1 / span 3;  
+  border: green solid 1px;
+  width: 100%;
+  height: 100%;
+  // margin: 25%;
 }
+
+.screenshot {
+  // grid-row: 1;    
+  border: solid 1vh black;
+  border-radius: 4vh;
+  height: 40%;
+  // top: 50%;
+  position: absolute;
+  // float: left;
+  margin: 5vh;
+  opacity: 1;
+  transition: opacity 1s linear;
+  &.fadeIn {
+    opacity: 1;
+    position: absolute;
+  }
+  &.fadeOut {
+    opacity: 0;
+    position: absolute;
+    
+  }
+}
+
 
 .feature-list {
   width: 95%;
