@@ -20,6 +20,7 @@ webpackConfig.output = {
 webpackConfig.plugins = [
   new HTMLPlugin({
     title: 'Seth Donohue',
+    template: 'src/assets/index-template.html',
   }),
   new EnvironmentPlugin(['NODE_ENV']),
   new DefinePlugin({

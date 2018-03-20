@@ -80,10 +80,11 @@ class Landing extends Component {
           </section>
 
           <div className="grid">
-            <div className="feature-left">
-              <h1> Project Title </h1>            
-              <Project properties={this.state.projects[0]} />
-              {/*
+
+              <div className="feature-left" key="0">
+                <h1> Project Title </h1>            
+                <Project />
+                {/*
                 <img src="https://i.imgur.com/wfvLvuq.png" alt="Real Time" />
               <h1><a href="http://www.firepolls.com">Firepolls</a></h1>
               <h4>Feb 2018 – Feb 2018</h4>
@@ -106,12 +107,12 @@ class Landing extends Component {
               </p>
             */}
 
-            </div>
-            <div className="feature-center">
-              <h1> Project Title </h1>                        
-              <Project properties={this.state.projects[2]} />
+              </div>
+              <div className="feature-center" key="1">
+                <h1> Project Title </h1>                        
+                <Project />
               
-              {/*
+                {/*
               <img src="https://i.imgur.com/RLqWOTH.png" alt="Analytics" />
               <h1><a href="https://github.com/HashMoney/Noncents">Noncents</a></h1>
               <h4>Jan 2018 – Jan 2018</h4>
@@ -119,7 +120,7 @@ class Landing extends Component {
               <p className="feature-desc">A purely back-end Blockchain project with persistent chain storage and peer-to-peer mining,
                 it is mainly a JavaScript experiment to build, understand and deploy a blockchain.
               </p>
-
+              
               <p className="feature-desc">Noncents was built in 5 days and allows for
               multiple servers to mine for blocks and get their block validated by the
               main chain verification server hosted on Heroku.
@@ -130,12 +131,12 @@ class Landing extends Component {
               <p>Live Raw Chain: <a href="http://noncents.herokuapp.com/chain">http://noncents.herokuapp.com/chain</a></p>
               <p>GitHub Repo: <a href="https://github.com/HashMoney/Noncents">https://github.com/HashMoney/Noncents</a></p>
               */}
-            </div>
-            <div className="feature-right">
-              <h1> Project Title </h1>            
-              <Project properties={this.state.projects[2]} />
+              </div>
+              <div className="feature-right" key="2">
+                <h1> Project Title </h1>            
+                <Project />
             
-              {/*
+                {/*
               <img src="https://i.imgur.com/DwpqLpv.png" alt="Anonymous Voting" />
               <h1><a href="https://sethdonohue.github.io/layout-generator/">Layout Generator</a></h1>
               <h4>Dec 2017 – Dec 2017</h4>
@@ -148,7 +149,7 @@ class Landing extends Component {
               <p>Live Site: <a href="https://sethdonohue.github.io/layout-generator/">https://sethdonohue.github.io/layout-generator/</a></p>
               <p>GitHub Repo: <a href="https://github.com/SethDonohue/layout-generator">https://github.com/SethDonohue/layout-generator</a></p>
               */}              
-            </div>
+              </div>
           </div>
           <footer className="footer">
             © 2018<a href="https://github.com/sethdonohue"> Seth Donohue on GitHub</a>

@@ -8,7 +8,48 @@ body {
   background: linear-gradient(148deg, rgb(42, 155, 255), rgb(31, 52, 71));
 
 }
+* {
+  border: solid 0.25px red;
+}
 
+.svg-background {
+  display: block;
+  margin: auto;
+  width: 1080px;
+  height: 1000px;
+  z-index: -1;
+  position: fixed;
+  transform-origin: 25% 25%;
+  transition: all 2s;
+  transition-timing-function: ease-in-out;
+  // polygon {
+  //   fill: rgb(218, 218, 218);
+  //   fill-opacity: 0.05;
+  //   stroke: rgb(218, 218, 218);
+  //   stroke-opacity: 0.5;
+  //   stroke-width: 25px;
+  //   stroke-linejoin: round;
+  // }
+}
+
+#background-path {
+  fill: transparent;
+  stroke: rgb(218, 218, 218);
+  stroke-opacity: 0.25;
+  stroke-width: 20px;
+}
+// #background-path-2 {
+//   fill: transparent;
+//   // fill-opacity: 0.05;
+//   stroke: rgb(139, 139, 139);
+//   stroke-opacity: 0.15;
+//   stroke-width: 1080px;
+//   // stroke-linejoin: round;
+// }
+
+// .svg-background:hover {
+//   transform: scale(100.5) rotate(90deg);
+// }
 //General on page-load fade-in for all browsers
 
 main {
