@@ -70,6 +70,7 @@ class Project extends Component {
       
         <ReactCSSTransitionGroup
           component="div"
+          className='screenshot-holder'
           transitionName="fade"
           transitionEnterTimeout={1000}
           transitionLeaveTimeout={0}
