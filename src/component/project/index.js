@@ -11,6 +11,9 @@ import analyticsImg from '../../image/analytics.png';
 import socketImg from '../../image/socket-io.png';
 import starsImg from '../../image/stars.png';
 
+// Declare styling and animation constants here:
+const transitionTime = 1000; // miliseconds,should be double what $transition-time is in style/_varss.scss
+
 class Project extends Component {
   state = {
     imgSrc: image1,
@@ -32,12 +35,17 @@ class Project extends Component {
   render() {
     // These are defined for multiple uses for OnMouseOver & onFocus for
     // Accessability as determined by a11y standards (https://a11yproject.com/)
-    const defaultMouseOut = () => {
+    const mouseOutList = () => {
       this.setState({
-        imgSrc: image1,
         featureOneSrc: analyticsImg,
         featureTwoSrc: starsImg,
         featureThreeSrc: socketImg,
+      });
+    };
+
+    const mouseOutUnorderedList = () => {
+      this.setState({
+        imgSrc: image1,
       });
     };
     const featureOneImgSrcSet = () => {
@@ -61,27 +69,28 @@ class Project extends Component {
     console.log(`Project Rendered`);
 
     return (
-      <div className="project-item">
+      <div className="project-item" >
       
         <ReactCSSTransitionGroup
           component="div"
+          className="screenshot-holder"
           transitionName="fade"
-          transitionEnterTimeout={1000}
-          transitionLeaveTimeout={0}
-          transitionLeave={false}
+          transitionEnterTimeout={transitionTime}
+          transitionLeaveTimeout={transitionTime}
+          // transitionLeave={false}
         >
           <img className="screenshot" src={this.state.imgSrc} key={this.state.imgSrc} alt="" />
         </ReactCSSTransitionGroup>
         
         
-        <ul className="feature-list">
+        <ul className="feature-list" onMouseLeave={mouseOutUnorderedList}>
           <li 
             className="feature"
             id="featureOne"
-            onMouseLeave={defaultMouseOut}
+            onMouseLeave={mouseOutList}
             onMouseOver={featureOneImgSrcSet}
             onFocus={featureOneImgSrcSet}
-            onBlur={defaultMouseOut}
+            onBlur={mouseOutList}
           > 
             <img className="feature-img" src={this.state.featureOneSrc} alt="" />
             <p>
@@ -95,9 +104,9 @@ class Project extends Component {
             className="feature"
             id="featureTwo"
             onMouseOver={featureTwoImgSrcSet}
-            onMouseLeave={defaultMouseOut}
+            onMouseLeave={mouseOutList}
             onFocus={featureTwoImgSrcSet}
-            onBlur={defaultMouseOut}
+            onBlur={mouseOutList}
           > 
             <img className="feature-img" src={this.state.featureTwoSrc} alt="" />
             <p>
@@ -111,9 +120,9 @@ class Project extends Component {
             className="feature"
             id="featureThree"
             onMouseOver={featureThreeImgSrcSet}
-            onMouseLeave={defaultMouseOut}
+            onMouseLeave={mouseOutList}
             onFocus={featureThreeImgSrcSet}
-            onBlur={defaultMouseOut}
+            onBlur={mouseOutList}
           > 
             <img className="feature-img" src={this.state.featureThreeSrc} alt="" />            
             <p>
