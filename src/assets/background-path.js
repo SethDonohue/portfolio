@@ -1,6 +1,6 @@
 // Get a reference to the <path> element
 const path = document.querySelector('#background-path');
-const svgText = document.querySelector('#background-text');
+const svgText = document.querySelector('#background-text-one');
 
 // Get length of <path>
 const pathLength = path.getTotalLength();
@@ -35,9 +35,12 @@ window.addEventListener('scroll', (event) => {
   // the end of the path won't match properly due to dashing, so move dash array
   if (scrollPercentage >= 0.99) {
     path.style.strokeDasharray = 'none';
-    svgText.style.strokeDasharray = 'none';
   } else {
     path.style.strokeDasharray = `${pathLength} ${pathLength}`;
+  }
+  if (scrollPercentage >= 0.45) {
+    svgText.style.strokeDasharray = 'none';
+  } else {
     svgText.style.strokeDasharray = `${svgTextLength} ${svgTextLength}`;
   }
 });
