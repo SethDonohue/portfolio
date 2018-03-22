@@ -11,6 +11,9 @@ import analyticsImg from '../../image/analytics.png';
 import socketImg from '../../image/socket-io.png';
 import starsImg from '../../image/stars.png';
 
+// Declare styling and animation constants here:
+const transitionTime = 1000; // miliseconds,should be double what $transition-time is in style/_varss.scss
+
 class Project extends Component {
   state = {
     imgSrc: image1,
@@ -66,21 +69,21 @@ class Project extends Component {
     console.log(`Project Rendered`);
 
     return (
-      <div className="project-item" onMouseLeave={mouseOutUnorderedList}>
+      <div className="project-item" >
       
         <ReactCSSTransitionGroup
           component="div"
-          className='screenshot-holder'
+          className="screenshot-holder"
           transitionName="fade"
-          transitionEnterTimeout={1000}
-          transitionLeaveTimeout={0}
-          transitionLeave={false}
+          transitionEnterTimeout={transitionTime}
+          transitionLeaveTimeout={transitionTime}
+          // transitionLeave={false}
         >
           <img className="screenshot" src={this.state.imgSrc} key={this.state.imgSrc} alt="" />
         </ReactCSSTransitionGroup>
         
         
-        <ul className="feature-list">
+        <ul className="feature-list" onMouseLeave={mouseOutUnorderedList}>
           <li 
             className="feature"
             id="featureOne"
