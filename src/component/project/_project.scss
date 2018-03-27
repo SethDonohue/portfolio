@@ -21,8 +21,6 @@
   grid-row: 1 / span 4;
   display: grid;
   align-items: center;
-  
-  border-color: yellow;
 }
 
 .screenshot {
@@ -72,6 +70,10 @@
   float: left;
   width: 75%;
   }
+  .icons {
+    fill: $primary-gray;
+    transition: all $transition-time ease;
+  }
 }
 
 #featureFour p {
@@ -81,5 +83,8 @@
 
 .feature:hover {
   transform: scale(1.15);  
-  color: rgb(65, 65, 65);
+  color: $primary-gray;
+  .icons{
+    fill: $primary-green;
+  }
 }
