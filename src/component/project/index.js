@@ -9,7 +9,7 @@ import image3 from '../../image/voterCroppedFull.jpg';
 import image4 from '../../image/project1ss4.png';
 
 // Declare styling and animation constants here:
-// miliseconds,should be double what $transition-time is in style/_varss.scss
+// miliseconds,should be double what $transition-slow is in style/_varss.scss
 const transitionTime = 1000;
 
 class Project extends Component {

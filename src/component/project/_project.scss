@@ -24,24 +24,22 @@
 }
 
 .screenshot {
-  box-sizing: border-box;
-  border: solid 3px $primary-black;
+  border: solid 3px $primary-blue;
   border-radius: 5px;
   box-shadow: 5px 2px 2px $primary-blue-transparent;
   width: 75%;
   position: absolute;
-  transition: all $transition-time ease;
+  transition: all $transition-fast ease;
   justify-self: center;
   &:hover {
-    transform: $primary-scale;
-    border: solid 5px $primary-green;
+    transform: $link-translate;
   }
 }
 
 .feature-list {
   width: 95%;
   grid-row: 1 / span 3;
-  transition: all $transition-time ease;
+  transition: all $transition-slow ease;
   margin: 0;
   padding: 0;
   height: 100%; 
@@ -57,7 +55,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  transition: all $transition-time ease-in-out;
+  transition: all $transition-slow ease-in-out;
   p {
     // grid-row: 1 / span 1;
     // width: 100%;
@@ -71,13 +69,13 @@
   img {
   // grid-row: 1 / span 1;
   
-  transition: all $transition-time ease;
+  transition: all $transition-slow ease;
   float: left;
   width: 75%;
   }
   .icons {
     fill: $primary-gray;
-    transition: all $transition-time ease;
+    transition: all $transition-slow ease;
   }
 }
 
