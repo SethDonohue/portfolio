@@ -13,6 +13,7 @@ a {
   .container-fluid {
     display: flex;
     flex-direction: column;
+    width: 50%;
     
     @media only screen and (min-width: 600px) {
       // height: 120px;
@@ -183,6 +184,17 @@ a {
   margin-top: 2em;
 }
 
+.intro {
+  display: inline-block;
+
+  p {
+    text-align: right;
+    max-width: 50%;
+    float: right;
+    margin: 1vw 0 0 0;
+  }
+}
+
 @media screen and (min-width: 60em) {
  .grid {
   grid-template-rows: 20em;
@@ -197,6 +209,12 @@ a {
   }
 
   
+}
+
+.summary {
+  margin: 1vw 0vw 1vw 6vw;
+  text-align: left;
+  max-width: 50vw;
 }
 
 .feature-left {

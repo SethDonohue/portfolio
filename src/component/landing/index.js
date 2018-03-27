@@ -80,38 +80,27 @@ class Landing extends Component {
             <h1 id="welcome-header" >Welcome to My Portfolio</h1>
             <br />
           </section>
+          <section className="intro" >
+            <p> Thanks for checking out my Portfolio. This page is built with JavaScript, HTML5, CSS3, and the React library. It was developed using Node.js, VSCode, Babel, Webpack and SaSS. <br />
+              Take a look at the projects below to see a summary of their technologies and features.
+            </p>
+
+          </section>
 
           <div className="grid">
 
             <div className="feature-left" key="0">
-              <h2 className="project-title" > Firepolls </h2>            
-              <Project />
-              {/*
-                <img src="https://i.imgur.com/wfvLvuq.png" alt="Real Time" />
-              <h2><a href="http://www.firepolls.com">Firepolls</a></h2>
-              <h4>Feb 2018 – Feb 2018</h4>
-              <p className="feature-desc">This is a school oriented app that allows for quick,
+              <h2> Firepolls </h2>  
+              <p className="summary"> A school oriented app that allows for quick,
                 anonymous, opinion polling on any topic.
-                You create a room, invite others too it and send out a question to get responses
+                You create a room, invite others too it and send out questions to get responses
                 from the voters.
               </p>
-
-              <p className="feature-desc">It was built with the idea of giving teachers instant feedback from the
-                students on topics that were covered in the class.
-                Firepolls also allows a poll creator to save their polls for reference
-                to keep track of how the opinions change.
-              </p>
-
-              <p className="feature-desc">Main Technologies: JavaScript, Socket IO, Babel, MongoDB, Heroku &
-                Continuous Deployment, Travis Continuous Integration, React, Redux,
-                Material UI, Artillery (Load Testing), Jest (Test Driven Development),
-                Webpack, Express, Node.
-              </p>
-            */}
-
+          
+              <Project />
             </div>
             <div className="feature-center" key="1">
-              <h2 className="project-title" > Project Title </h2>                        
+              <h2> Project Title </h2>                        
               <Project />
               
               {/*
@@ -135,7 +124,7 @@ class Landing extends Component {
               */}
             </div>
             <div className="feature-right" key="2">
-              <h2 className="project-title" > Project Title </h2>            
+              <h2> Project Title </h2>            
               <Project />
             
               {/*

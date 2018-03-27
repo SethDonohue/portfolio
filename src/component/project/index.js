@@ -67,6 +67,12 @@ class Project extends Component {
       });
     };
 
+    const featureFourImgSrcSet = () => {
+      this.setState({
+        imgSrc: image1,
+      });
+    };
+
     return (
       <div className="project-item" >
       
@@ -93,10 +99,12 @@ class Project extends Component {
           > 
             <img className="feature-img" src={this.state.featureOneSrc} alt="" />
             <p>
-              <h3> Real Time Data </h3>
-              Instant feeback from voters to poll owners using the Socket IO technology
+              <h3> Real Time </h3>
+                Enables bi-directional, event-based communication and
+                allows users to create polling rooms.
 
-              {/*This is a school oriented app that allows for quick,
+              {/*
+              This is a school oriented app that allows for quick,
               anonymous, opinion polling on any topic.
               You create a room, invite others too it and send out a question to get responses
               from the voters.
@@ -121,9 +129,8 @@ class Project extends Component {
           > 
             <img className="feature-img" src={this.state.featureTwoSrc} alt="" />
             <p>
-              <h3> TitleTitleTitle </h3>
-              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
-              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
+              <h3> Analytics </h3>
+              Push data to clients and visualize results in real time.
             </p>
           </li>
 
@@ -137,9 +144,23 @@ class Project extends Component {
           > 
             <img className="feature-img" src={this.state.featureThreeSrc} alt="" />            
             <p>
-              <h3> TitleTitleTitle </h3>
-              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
-              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
+              <h3> Anonymous Voting </h3>
+              Keep track of how many people have responded to a poll while keeping votes anonymous.
+            </p>
+          </li>
+
+          <li 
+            className="feature"
+            id="featureFour"
+            onMouseOver={featureFourImgSrcSet}
+            onMouseLeave={mouseOutList}
+            onFocus={featureFourImgSrcSet}
+            onBlur={mouseOutList}
+          > 
+            <img className="feature-img" src={this.state.featureFourSrc} alt="" />            
+            <p>
+              <h3> Main technologies </h3>
+              JavaScript, Socket IO, Babel, MongoDB, Heroku & Continuous Deployment, Travis Continuous Integration, React, Redux, Material UI, Artillery (Load Testing), Jest (Test Driven Development), Webpack, Express, Node.
             </p>
           </li>
         </ul>
