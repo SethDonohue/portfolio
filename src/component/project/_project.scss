@@ -1,6 +1,7 @@
 @import '_vars';
 
 .project-item {
+  color: rgb(125, 125, 125);
   height: 500px;
   max-width: 1080px;
   display: grid;
@@ -74,5 +75,5 @@
 
 .feature:hover {
   transform: scale(1.15);  
-  color: white;
+  color: rgb(65, 65, 65);
 }

@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import React, { Component, Fragment } from 'react';
-import { RaisedButton, TextField } from 'material-ui';
-import muiThemeable from 'material-ui/styles/muiThemeable';
+// import { RaisedButton, TextField } from 'material-ui';
+// import muiThemeable from 'material-ui/styles/muiThemeable';
 
 import Project from '../project';
 
-import AuthForm from '../auth-form';
-import { signupAction, loginAction, logoutAction } from '../../action/auth';
+// import AuthForm from '../auth-form';
+// import { signupAction, loginAction, logoutAction } from '../../action/auth';
 
 import './_landing.scss';
 
@@ -16,8 +16,8 @@ const defaultState = {
     { screenshots: ['/src/image/project2ss1.png', '/src/image/project2ss2.png', '/src/image/project2ss3.png', '/src/image/project1ss4.png'] }, 
     { screenshots: ['/src/image/project3ss1.png', '/src/image/project3ss2.png', '/src/image/project3ss3.png', '/src/image/project1ss4.png'] }, 
   ],
-  signingUp: false,
-  loggingIn: false,
+  // signingUp: false,
+  // loggingIn: false,
 };
 
 class Landing extends Component {
@@ -26,40 +26,40 @@ class Landing extends Component {
   emptyState = { ...this.state };
 
   render() {
-    const {
-      signup,
-      login,
-      logout,
-    } = this.props;
+    // const {
+    //   signup,
+    //   login,
+    //   logout,
+    // } = this.props;
 
-    const signupLoginJSX = (
-      <ul className="nav-items">
-        <li>
-          <RaisedButton
-            onClick={() =>
-              this.setState(previousState => ({
-                signingUp: !previousState.signingUp,
-                loggingIn: false,
-              }))
-            }
-          >
-            Signup
-          </RaisedButton>
-        </li>
-        <li>
-          <RaisedButton
-            onClick={() =>
-              this.setState(previousState => ({
-                signingUp: false,
-                loggingIn: !previousState.loggingIn,
-              }))
-            }
-          >
-            Login
-          </RaisedButton>
-        </li>
-      </ul>
-    );
+    // const signupLoginJSX = (
+    //   <ul className="nav-items">
+    //     <li>
+    //       <RaisedButton
+    //         onClick={() =>
+    //           this.setState(previousState => ({
+    //             signingUp: !previousState.signingUp,
+    //             loggingIn: false,
+    //           }))
+    //         }
+    //       >
+    //         Signup
+    //       </RaisedButton>
+    //     </li>
+    //     <li>
+    //       <RaisedButton
+    //         onClick={() =>
+    //           this.setState(previousState => ({
+    //             signingUp: false,
+    //             loggingIn: !previousState.loggingIn,
+    //           }))
+    //         }
+    //       >
+    //         Login
+    //       </RaisedButton>
+    //     </li>
+    //   </ul>
+    // );
 
     return (
       <Fragment>
@@ -77,18 +77,18 @@ class Landing extends Component {
             </div>
           </div>
           <section className="jumbotron">
-            <h1><span>Welcome to My Portfolio</span></h1>
+            <h1 id="welcome-header" >Welcome to My Portfolio</h1>
             <br />
           </section>
 
           <div className="grid">
 
             <div className="feature-left" key="0">
-              <h1> Project Title </h1>            
+              <h2 className="project-title" > Project Title </h2>            
               <Project />
               {/*
                 <img src="https://i.imgur.com/wfvLvuq.png" alt="Real Time" />
-              <h1><a href="http://www.firepolls.com">Firepolls</a></h1>
+              <h2><a href="http://www.firepolls.com">Firepolls</a></h2>
               <h4>Feb 2018 – Feb 2018</h4>
               <p className="feature-desc">This is a school oriented app that allows for quick,
                 anonymous, opinion polling on any topic.
@@ -111,12 +111,12 @@ class Landing extends Component {
 
             </div>
             <div className="feature-center" key="1">
-              <h1> Project Title </h1>                        
+              <h2 className="project-title" > Project Title </h2>                        
               <Project />
               
               {/*
               <img src="https://i.imgur.com/RLqWOTH.png" alt="Analytics" />
-              <h1><a href="https://github.com/HashMoney/Noncents">Noncents</a></h1>
+              <h2><a href="https://github.com/HashMoney/Noncents">Noncents</a></h2>
               <h4>Jan 2018 – Jan 2018</h4>
 
               <p className="feature-desc">A purely back-end Blockchain project with persistent chain storage and peer-to-peer mining,
@@ -135,7 +135,7 @@ class Landing extends Component {
               */}
             </div>
             <div className="feature-right" key="2">
-              <h1> Project Title </h1>            
+              <h2 className="project-title" > Project Title </h2>            
               <Project />
             
               {/*
@@ -163,12 +163,12 @@ class Landing extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  signup: userData => dispatch(signupAction(userData)),
-  login: userData => dispatch(loginAction(userData)),
+  // signup: userData => dispatch(signupAction(userData)),
+  // login: userData => dispatch(loginAction(userData)),
 });
 
 const mapStateToProps = state => ({
-  loggedIn: !!state.token,
+  // loggedIn: !!state.token,
 });
 
 export default Landing;
