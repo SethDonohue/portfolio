@@ -25,12 +25,17 @@
 
 .screenshot {
   box-sizing: border-box;
-  border: solid 3px black;
-  border-radius: 25px;
+  border: solid 3px $primary-black;
+  border-radius: 5px;
+  box-shadow: 5px 2px 2px $primary-blue-transparent;
   width: 75%;
   position: absolute;
   transition: all $transition-time ease;
   justify-self: center;
+  &:hover {
+    transform: $primary-scale;
+    border: solid 5px $primary-green;
+  }
 }
 
 .feature-list {
@@ -82,7 +87,7 @@
 }
 
 .feature:hover {
-  transform: scale(1.15);  
+  transform: $primary-scale;  
   color: $primary-gray;
   .icons{
     fill: $primary-green;

@@ -3,16 +3,17 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './_project.scss';
 
-import image1 from '../../image/project1ss1.png';
-import image2 from '../../image/project1ss2.png';
-import image3 from '../../image/project1ss3.png';
+import image1 from '../../image/landingCroppedFull.jpg';
+import image2 from '../../image/ownerCroppedFull.jpg';
+import image3 from '../../image/voterCroppedFull.jpg';
 import image4 from '../../image/project1ss4.png';
 import analyticsImg from '../../image/analytics.png';
 import socketImg from '../../image/socket-io.png';
 import starsImg from '../../image/stars.png';
 
 // Declare styling and animation constants here:
-const transitionTime = 1000; // miliseconds,should be double what $transition-time is in style/_varss.scss
+// miliseconds,should be double what $transition-time is in style/_varss.scss
+const transitionTime = 1000;
 
 class Project extends Component {
   state = {
@@ -87,15 +88,15 @@ class Project extends Component {
           <img className="screenshot" src={this.state.imgSrc} key={this.state.imgSrc} alt="" />
         </ReactCSSTransitionGroup>
         
-        
-        <ul className="feature-list" onMouseLeave={mouseOutUnorderedList}>
+        {/*onMouseLeave={mouseOutUnorderedList}*/}
+        <ul className="feature-list" >
           <li 
             className="feature"
             id="featureOne"
-            onMouseLeave={mouseOutList}
+            // onMouseLeave={mouseOutList}
             onMouseOver={featureOneImgSrcSet}
             onFocus={featureOneImgSrcSet}
-            onBlur={mouseOutList}
+            // onBlur={mouseOutList}
           > 
             <svg className="icons icons-stopwatch" version="1.1" xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 48 48">
               <title>stopwatch</title>
