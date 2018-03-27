@@ -1,10 +1,22 @@
+// Colors
 $primary-blue: rgb(0, 29, 126);
+$primary-blue-transparent: rgba(0, 29, 126, 0.5);
+$primary-green: rgb(0, 124, 87);
+$primary-gray: rgb(65, 65, 65);
+$primary-black: black;
 
+// Padding and Margin
 $pad: 0.5em;
+$feature-margin: 0 0 5vw 0;
 
+// Fonts
 $font-main: 'Lato', sans-serif;
 $font-mono: 'Roboto Mono', monospace;
 
+// Transitions
 $transition-time: 0.5s;
+$link-duration: 0.5s;
+$link-translate: translate(30px, 0);
 
-$feature-margin: 0 0 10vw 0;
+// Transforms
+$primary-scale: scale(1.15);

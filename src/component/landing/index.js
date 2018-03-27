@@ -80,38 +80,30 @@ class Landing extends Component {
             <h1 id="welcome-header" >Welcome to My Portfolio</h1>
             <br />
           </section>
+          <section className="intro" >
+            <p> Thanks for checking out my Portfolio. <br />
+            It is developed with ReactJS, Node.js, Babel, Webpack and SaSS. <br /> <br />
+            Take a look at the projects below to see a summary of their technologies and features.
+            
+              
+            </p>
+
+          </section>
 
           <div className="grid">
 
             <div className="feature-left" key="0">
-              <h2 className="project-title" > Project Title </h2>            
-              <Project />
-              {/*
-                <img src="https://i.imgur.com/wfvLvuq.png" alt="Real Time" />
-              <h2><a href="http://www.firepolls.com">Firepolls</a></h2>
-              <h4>Feb 2018 – Feb 2018</h4>
-              <p className="feature-desc">This is a school oriented app that allows for quick,
+              <h2><a href="https://github.com/sethdonohue" target="_blank" rel="noopener noreferrer">Firepolls</a></h2>  
+              <p className="summary"> A school oriented app that allows for quick,
                 anonymous, opinion polling on any topic.
-                You create a room, invite others too it and send out a question to get responses
+                Create a room, invite others too it and send out questions to get responses
                 from the voters.
               </p>
-
-              <p className="feature-desc">It was built with the idea of giving teachers instant feedback from the
-                students on topics that were covered in the class.
-                Firepolls also allows a poll creator to save their polls for reference
-                to keep track of how the opinions change.
-              </p>
-
-              <p className="feature-desc">Main Technologies: JavaScript, Socket IO, Babel, MongoDB, Heroku &
-                Continuous Deployment, Travis Continuous Integration, React, Redux,
-                Material UI, Artillery (Load Testing), Jest (Test Driven Development),
-                Webpack, Express, Node.
-              </p>
-            */}
-
+          
+              <Project />
             </div>
-            <div className="feature-center" key="1">
-              <h2 className="project-title" > Project Title </h2>                        
+            {/*<div className="feature-center" key="1">
+              {/*<h2> Project Title </h2>                        
               <Project />
               
               {/*
@@ -132,10 +124,9 @@ class Landing extends Component {
 
               <p>Live Raw Chain: <a href="http://noncents.herokuapp.com/chain">http://noncents.herokuapp.com/chain</a></p>
               <p>GitHub Repo: <a href="https://github.com/HashMoney/Noncents">https://github.com/HashMoney/Noncents</a></p>
-              */}
             </div>
             <div className="feature-right" key="2">
-              <h2 className="project-title" > Project Title </h2>            
+              <h2> Project Title </h2>            
               <Project />
             
               {/*
@@ -150,11 +141,10 @@ class Landing extends Component {
 
               <p>Live Site: <a href="https://sethdonohue.github.io/layout-generator/">https://sethdonohue.github.io/layout-generator/</a></p>
               <p>GitHub Repo: <a href="https://github.com/SethDonohue/layout-generator">https://github.com/SethDonohue/layout-generator</a></p>
-              */}              
-            </div>
+            </div>*/}
           </div>
           <footer className="footer">
-            © 2018<a href="https://github.com/sethdonohue"> Seth Donohue on GitHub</a>
+            <p><a href="https://github.com/sethdonohue" target="_blank" rel="noopener noreferrer"> © 2018 Seth Donohue on GitHub</a></p>
           </footer>
         </div>
       </Fragment>

@@ -12,9 +12,27 @@ body {
   // background: linear-gradient(148deg, rgb(42, 155, 255), rgb(31, 52, 71));
 
 }
-// * {
-//   border: solid 0.25px red;
-// }
+
+a {
+  color: $primary-blue;
+  text-decoration: none;
+  transition-duration: $link-duration;
+  &:hover{
+    transform: $link-translate;
+  }
+}
+
+h2 {
+  font-size: 2em;
+  margin: 0 0 0 6vw;
+  text-align: left;
+  max-width: 25%;
+  display: block;
+  transition-duration: $link-duration;
+  &:hover{
+    transform: $link-translate;
+  }
+}
 
 .svg-background {
   display: block;
