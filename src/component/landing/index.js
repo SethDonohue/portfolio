@@ -84,7 +84,7 @@ class Landing extends Component {
           <div className="grid">
 
             <div className="feature-left" key="0">
-              <h2 className="project-title" > Project Title </h2>            
+              <h2 className="project-title" > Firepolls </h2>            
               <Project />
               {/*
                 <img src="https://i.imgur.com/wfvLvuq.png" alt="Real Time" />

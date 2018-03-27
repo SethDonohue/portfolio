@@ -93,9 +93,21 @@ class Project extends Component {
           > 
             <img className="feature-img" src={this.state.featureOneSrc} alt="" />
             <p>
-              <h3> TitleTitleTitle </h3>
-              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
-              One Lorem IpsumFeature One Lorem IpsumFeature One Lorem 
+              <h3> Real Time Data </h3>
+              Instant feeback from voters to poll owners using the Socket IO technology
+
+              {/*This is a school oriented app that allows for quick,
+              anonymous, opinion polling on any topic.
+              You create a room, invite others too it and send out a question to get responses
+              from the voters.
+
+              It was built with the idea of giving teachers instant feedback from the students on topics that were covered in the class.
+              Firepolls also allows a poll creator to save their polls for reference
+              to keep track of how the opinions change.
+
+              Main Technologies: JavaScript, Socket IO, Babel, MongoDB, Heroku & Continuous Deployment, Travis Continuous Integration, React, Redux,
+              Material UI, Artillery (Load Testing), Jest (Test Driven Development),
+              Webpack, Express, Node.*/}
             </p>
           </li>
 
