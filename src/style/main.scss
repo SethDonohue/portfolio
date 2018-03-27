@@ -8,15 +8,36 @@ body {
   font-family: Lato, sans-serif;
   max-width: 1080px;
   margin: 0 auto;
-  background: -webkit-linear-gradient(148deg, rgb(42, 155, 255), rgb(31, 52, 71));
-  background: linear-gradient(148deg, rgb(42, 155, 255), rgb(31, 52, 71));
+  // background: -webkit-linear-gradient(148deg, rgb(42, 155, 255), rgb(31, 52, 71));
+  // background: linear-gradient(148deg, rgb(42, 155, 255), rgb(31, 52, 71));
 
 }
-* {
-  border: solid 0.25px red;
-}
+// * {
+//   border: solid 0.25px red;
+// }
 
 .svg-background {
+  display: block;
+  margin: auto;
+  width: 1080px;
+  height: 1000px;
+  z-index: -1;
+  position: fixed;
+  transform-origin: 25% 25%;
+  transition: all 2s;
+  transition-timing-function: ease-in-out;
+  // polygon {
+  //   fill: rgb(218, 218, 218);
+  //   fill-opacity: 0.05;
+  //   stroke: rgb(218, 218, 218);
+  //   stroke-opacity: 0.5;
+  //   stroke-width: 25px;
+  //   stroke-linejoin: round;
+  // }
+}
+.svg-background-text {
+  left: 0vw;
+  position: fixed;
   display: block;
   margin: auto;
   width: 1080px;
@@ -39,8 +60,15 @@ body {
 #background-path {
   fill: transparent;
   stroke: rgb(218, 218, 218);
-  stroke-opacity: 0.25;
+  stroke-opacity: 0.0;
   stroke-width: 20px;
+}
+
+#background-text-one, #background-text-two {
+  fill: transparent;
+  stroke: rgb(218, 218, 218);
+  stroke-opacity: 0.05;
+  stroke-width: 80px;
 }
 // #background-path-2 {
 //   fill: transparent;

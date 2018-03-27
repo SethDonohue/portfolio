@@ -22,9 +22,9 @@ class Project extends Component {
     featureThreeSrc: socketImg,
   }
 
-  componentDidUpdate() {
-    console.log('componentDidUpdate');
-  }
+  // componentDidUpdate() {
+  //   console.log('componentDidUpdate');
+  // }
 
   // getTarget = (event) => {
   //   const hoveredFeatureId = event.target.attr('id');
@@ -66,7 +66,6 @@ class Project extends Component {
         featureThreeSrc: analyticsImg,
       });
     };
-    console.log(`Project Rendered`);
 
     return (
       <div className="project-item" >
