@@ -27,10 +27,10 @@
   border: solid 3px $primary-blue;
   border-radius: 5px;
   box-shadow: 5px 2px 2px $primary-blue-transparent;
-  width: 90%;
+  width: 95%;
   position: absolute;
   transition: all $transition-fast ease;
-  justify-self: center;
+  justify-self: left;
   // z-index: 0;
   // &:hover {
   //   transform: $link-translate;
@@ -77,17 +77,16 @@
     width: $width;
     height: $height;
   }
+  &:hover {
+  transform: $primary-scale $link-translate;
+  color: $primary-gray;
+  .icons{
+    fill: $primary-green;
+  }
+}
 }
 
 #featureFour section {
   display: inline;
   grid-column: 1 / span 2;
-}
-
-.feature:hover {
-  transform: $primary-scale;  
-  color: $primary-gray;
-  .icons{
-    fill: $primary-green;
-  }
 }
