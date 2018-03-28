@@ -31,9 +31,9 @@
   position: absolute;
   transition: all $transition-fast ease;
   justify-self: center;
-  &:hover {
-    transform: $link-translate;
-  }
+  // &:hover {
+  //   transform: $link-translate;
+  // }
 }
 
 .feature-list {
@@ -56,22 +56,18 @@
   margin: 0;
   list-style: none;
   transition: all $transition-slow ease-in-out;
-  p {
+  section {
+    h3 {
+    margin: 0.5vw 0.5vw 0 0.5vw;
+    padding: 0.5vw 0.5vw 0 0.5vw;
+    }
+    p {
     // grid-row: 1 / span 1;
     // width: 100%;
-    margin: 0.5vw;
-    padding: 0.5vw;
+    margin: 0.1vw 0.5vw 0.5vw 0.5vw;
+    padding: 0 0.5vw 0.5vw 0.5vw;
     text-align: left;
-    h3 {
-      margin: 0.1vw;
-    }
   }
-  img {
-  // grid-row: 1 / span 1;
-  
-  transition: all $transition-slow ease;
-  float: left;
-  width: 75%;
   }
   .icons {
     fill: $primary-gray;
@@ -79,7 +75,7 @@
   }
 }
 
-#featureFour p {
+#featureFour section {
   display: inline;
   grid-column: 1 / span 2;
 }
