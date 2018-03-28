@@ -4,7 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './_project.scss';
 
 import image1 from '../../image/landingCroppedFull.jpg';
-import image2 from '../../image/Peek Create Room.gif';
+import image2 from '../../image/Peek Create Room2.gif';
 import image3 from '../../image/VotersJoiningVoting.gif';
 import image4 from '../../image/LiveAnnonymousVoting.gif';
 
