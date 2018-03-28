@@ -5,7 +5,7 @@
   height: 450px;
   max-width: 1080px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 60% 40%;
   grid-template-rows: repeat(4, 25%);
   align-items: center;
   text-align: left;
@@ -24,24 +24,23 @@
 }
 
 .screenshot {
-  box-sizing: border-box;
-  border: solid 3px $primary-black;
+  border: solid 3px $primary-blue;
   border-radius: 5px;
   box-shadow: 5px 2px 2px $primary-blue-transparent;
-  width: 75%;
+  width: 95%;
   position: absolute;
-  transition: all $transition-time ease;
-  justify-self: center;
-  &:hover {
-    transform: $primary-scale;
-    border: solid 5px $primary-green;
-  }
+  transition: all $transition-fast ease;
+  justify-self: left;
+  // z-index: 0;
+  // &:hover {
+  //   transform: $link-translate;
+  // }
 }
 
 .feature-list {
   width: 95%;
   grid-row: 1 / span 3;
-  transition: all $transition-time ease;
+  transition: all $transition-slow ease;
   margin: 0;
   padding: 0;
   height: 100%; 
@@ -49,7 +48,7 @@
 
 .feature {
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 20% 80%;
   justify-items: center;  
   align-items: center;  
   height: 33%;
@@ -57,39 +56,37 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  transition: all $transition-time ease-in-out;
-  p {
+  transition: all $transition-slow ease-in-out;
+  section {
+    h3 {
+    margin: 0.5vw 0.5vw 0 0.5vw;
+    padding: 0.5vw 0.5vw 0 0.5vw;
+    }
+    p {
     // grid-row: 1 / span 1;
     // width: 100%;
-    margin: 0.5vw;
-    padding: 0.5vw;
+    margin: 0.1vw 0.5vw 0.5vw 0.5vw;
+    padding: 0 0.5vw 0.5vw 0.5vw;
     text-align: left;
-    h3 {
-      margin: 0.1vw;
-    }
+    font-size: $small-text-size;
   }
-  img {
-  // grid-row: 1 / span 1;
-  
-  transition: all $transition-time ease;
-  float: left;
-  width: 75%;
   }
   .icons {
     fill: $primary-gray;
-    transition: all $transition-time ease;
+    transition: all $transition-slow ease;
+    width: $width;
+    height: $height;
   }
-}
-
-#featureFour p {
-  display: inline;
-  grid-column: 1 / span 2;
-}
-
-.feature:hover {
-  transform: $primary-scale;  
+  &:hover {
+  transform: $primary-scale $link-translate;
   color: $primary-gray;
   .icons{
     fill: $primary-green;
   }
+}
+}
+
+#featureFour section {
+  display: inline;
+  grid-column: 1 / span 2;
 }

@@ -14,9 +14,17 @@ $font-main: 'Lato', sans-serif;
 $font-mono: 'Roboto Mono', monospace;
 
 // Transitions
-$transition-time: 0.5s;
+$transition-slow: 0.5s;
+$transition-fast: 0.25s;
 $link-duration: 0.5s;
-$link-translate: translate(30px, 0);
+$link-translate: translate(20px, 0);
+$primary-scale: scale(1.20);
 
-// Transforms
-$primary-scale: scale(1.15);
+// Text
+$large-text-size: 1.25em;
+$medium-text-size: 1em;
+$small-text-size: 0.9em;
+
+// Icons
+$width: 90%;
+$height: 90%;
