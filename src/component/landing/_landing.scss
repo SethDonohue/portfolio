@@ -195,14 +195,13 @@
   .feature-desc {
     padding: 0 17em;
   }
-
-  
 }
 
 .summary {
-  margin: 1vw 0vw 1vw 6vw;
+  margin: 0vw 0vw 1vw 6vw;
   text-align: left;
   max-width: 50vw;
+  font-size: $medium-text-size;
 }
 
 .feature-left {

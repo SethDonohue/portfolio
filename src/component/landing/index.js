@@ -93,7 +93,7 @@ class Landing extends Component {
           <div className="grid">
 
             <div className="feature-left" key="0">
-              <h2><a href="http://firepolls.com" target="_blank" rel="noopener noreferrer">Firepolls</a></h2>  
+              <h2><a href="http://firepolls.com" target="_blank" rel="noopener noreferrer">Firepolls - www.firepolls.com</a></h2>
               <p className="summary"> A school oriented app that allows for quick,
                 anonymous, opinion polling on any topic.
                 Create a room, invite others too it and send out questions to get responses
