@@ -102,11 +102,11 @@ class Landing extends Component {
           
               <Project />
             </div>
-            {/* <div className="feature-center" key="1">
-              {/*<h2> Project Title </h2>                        
+            <div className="feature-center" key="1">
+              <h2> More Content comming soon... </h2>                        
+              {/*
               <Project />
               
-              {/*
               <img src="https://i.imgur.com/RLqWOTH.png" alt="Analytics" />
               <h2><a href="https://github.com/HashMoney/Noncents">Noncents</a></h2>
               <h4>Jan 2018 – Jan 2018</h4>
@@ -147,8 +147,8 @@ class Landing extends Component {
               <p>Live Site: <a href="https://sethdonohue.github.io/layout-generator/">
               https://sethdonohue.github.io/layout-generator/</a></p>
               <p>GitHub Repo: <a href="https://github.com/SethDonohue/layout-generator">
-              https://github.com/SethDonohue/layout-generator</a></p>
-            </div> */}
+              https://github.com/SethDonohue/layout-generator</a></p>*/}
+            </div> 
           </div>
           <footer className="footer">
             <p><a href="https://github.com/sethdonohue" target="_blank" rel="noopener noreferrer"> © 2018 Seth Donohue on GitHub</a></p>
