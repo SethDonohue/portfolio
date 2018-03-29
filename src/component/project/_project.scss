@@ -90,4 +90,6 @@
 #featureFour section {
   display: inline;
   grid-column: 1 / span 2;
+  justify-self: left;
+  align-self: flex-start;
 }

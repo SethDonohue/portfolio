@@ -26,7 +26,7 @@ h2 {
   font-size: 1.75em;
   margin: 0 0 0 1vw;
   text-align: left;
-  max-width: 45%;
+  max-width: 60%;
   display: block;
   transition-duration: $link-duration;
   &:hover{
@@ -35,6 +35,8 @@ h2 {
 }
 
 .svg-background {
+  bottom: 0;
+  right: 0;
   display: block;
   margin: auto;
   width: 1080px;
@@ -54,12 +56,13 @@ h2 {
   // }
 }
 .svg-background-text {
-  left: 0vw;
+  right: -90px;
+  bottom: 0;
   position: fixed;
   display: block;
   margin: auto;
-  width: 1080px;
-  height: 1000px;
+  height: 350px;
+  width: 350px;
   z-index: -1;
   position: fixed;
   transform-origin: 25% 25%;

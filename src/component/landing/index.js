@@ -10,22 +10,68 @@ import Project from '../project';
 
 import './_landing.scss';
 
+// Defining State Here
 const defaultState = {
   projects: [
-    { screenshots: ['/src/image/project1ss1.png', '/src/image/project1ss2.png', '/src/image/project1ss3.png', '/src/image/project1ss4.png'] }, 
-    { screenshots: ['/src/image/project2ss1.png', '/src/image/project2ss2.png', '/src/image/project2ss3.png', '/src/image/project1ss4.png'] }, 
-    { screenshots: ['/src/image/project3ss1.png', '/src/image/project3ss2.png', '/src/image/project3ss3.png', '/src/image/project1ss4.png'] }, 
+    { 
+      images: ['/src/image/landingCroppedFull.jpg', '/src/image/Peek Create Room2.gif', '/src/image/VotersJoiningVoting.gif', '/src/image/LiveAnnonymousVoting.gif'],
+      content: {
+        featureOneTitle: 'Simple',
+        featureOneContent: 'Easy and fast to use. Create a room, have voters join it and create the first question to begin polling.',
+
+        featureTwoTitle: 'Real Time Data',
+        featureTwoContent: 'Visualize results in real time and easily know where the audience stands on any topic at any time.',
+
+        featureThreeTitle: 'Anonymous Voting',
+        featureThreeContent: 'Keep track of how many people have responded to a poll while keeping votes anonymous.',
+
+        featureFourTitle: 'Main Technologies',
+        featureFourContent: 'JavaScript, Socket IO, Babel, MongoDB, Heroku & Continuous Deployment, Travis Continuous Integration, React, Redux, Material UI, Artillery(Load Testing), Jest(Test Driven Development), Webpack, Express, Node.',
+      },
+      icons: ['default', 'checkmark', 'stopwatch', 'users'],      
+    },
+    { 
+      images: ['/src/image/LayoutGenerator.png', '/src/image/LayoutGeneratorFULL.gif', '/src/image/LayoutGeneratorFULL.gif', '/src/image/LayoutGeneratorFULL.gif'],
+      content: {
+        featureOneTitle: 'Simple',
+        featureOneContent: 'Choose a template. Choose a Color, with or without a background. Get your code.',
+
+        featureTwoTitle: 'Live Changes',
+        featureTwoContent: 'See your template exactly how it would look as you apply the changes.',
+
+        featureThreeTitle: 'Quick Code Results',
+        featureThreeContent: 'Get the HTML, CSS, and JavaScript in a legible format and copy it to our site to have a clean site, ready to go.',
+
+        featureFourTitle: 'Main Technologies',
+        featureFourContent: 'JavaScript, HTML5, CSS3',
+      },
+      icons: ['default', 'clipboard', 'feed', 'embed2'],
+    },
+  
+  
   ],
+  
   // signingUp: false,
   // loggingIn: false,
 };
 
+
 class Landing extends Component {
   state = defaultState;
-  
+    
   emptyState = { ...this.state };
 
   render() {
+    // const {
+    //   ,
+    //   content,
+    // } = this.state;
+
+    // console.log('Landing State', this.state);
+    
+    // console.log('Landing Props', this.props);
+    // console.log('Landing Images', images);
+    
     // const {
     //   signup,
     //   login,
@@ -96,17 +142,36 @@ class Landing extends Component {
           <div className="grid">
 
             <div className="feature-left" key="0">
-              <h2><a href="http://firepolls.com" target="_blank" rel="noopener noreferrer">Firepolls - www.firepolls.com</a></h2>
+              {/* TODO: MOVE <h2> <p> to project */}
+              <h2><a href="http://firepolls.com" target="_blank" rel="noopener noreferrer">Firepolls <br /> www.firepolls.com</a></h2>
               <p className="summary"> A school oriented app that allows for quick,
                 anonymous, opinion polling on any topic.
                 Create a room, invite others too it and send out questions to get responses
                 from the voters.
               </p>
-          
-              <Project />
+              
+              <Project
+                images={this.state.projects[0].images}
+                content={this.state.projects[0].content}
+                icons={this.state.projects[0].icons}
+              />
+
             </div>
+
             <div className="feature-center" key="1">
-              <h2> More Content comming soon... </h2>                        
+              <h2><a href="https://sethdonohue.github.io/layout-generator" target="_blank" rel="noopener noreferrer">Layout Generator <br /> sethdonohue.github.io/layout-generator</a></h2>
+              <p className="summary"> A school oriented app that allows for quick,
+                anonymous, opinion polling on any topic.
+                Create a room, invite others too it and send out questions to get responses
+                from the voters.
+              </p>
+
+              <Project
+                images={this.state.projects[1].images}
+                content={this.state.projects[1].content}
+                icons={this.state.projects[1].icons}
+              />
+                                      
               {/*
                 TODO: ADD MORE PROJECTS
               <Project />
@@ -164,14 +229,15 @@ class Landing extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  // signup: userData => dispatch(signupAction(userData)),
-  // login: userData => dispatch(loginAction(userData)),
-});
+// const mapDispatchToProps = dispatch => ({
+// signup: userData => dispatch(signupAction(userData)),
+// login: userData => dispatch(loginAction(userData)),
+// });
 
-const mapStateToProps = state => ({
-  // loggedIn: !!state.token,
-});
+// const mapStateToProps = state => ({
+//   images: state.images, // array
+//   content: state.content, // object
+// });
 
 export default Landing;
-// export default connect(mapStateToProps, mapDispatchToProps)(Landing);
+// export default connect(mapStateToProps)(Landing);
