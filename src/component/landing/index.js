@@ -102,11 +102,20 @@ class Landing extends Component {
                 Create a room, invite others too it and send out questions to get responses
                 from the voters.
               </p>
-          
+              
               <Project />
+
             </div>
             <div className="feature-center" key="1">
-              <h2> More Content comming soon... </h2>                        
+              <h2><a href="http://firepolls.com" target="_blank" rel="noopener noreferrer">Firepolls - www.firepolls.com</a></h2>
+              <p className="summary"> A school oriented app that allows for quick,
+                anonymous, opinion polling on any topic.
+                Create a room, invite others too it and send out questions to get responses
+                from the voters.
+              </p>
+
+              <Project />
+                                      
               {/*
                 TODO: ADD MORE PROJECTS
               <Project />

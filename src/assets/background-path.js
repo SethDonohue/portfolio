@@ -5,6 +5,7 @@ const svgText = document.querySelector('#background-text-one');
 // Get length of <path>
 // const pathLength = path.getTotalLength();
 const svgTextLength = svgText.getTotalLength();
+console.log(svgTextLength);
 
 // Creates very long dash to initially hide the shape
 // path.style.strokeDasharray = `${pathLength} ${pathLength}`;
@@ -24,9 +25,10 @@ window.addEventListener('scroll', (event) => {
 
   const scrollPercentage2 = (document.documentElement.scrollTop + document.body.scrollTop) / 
   (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-  
+  console.log('Scroll %', scrollPercentage2);
   // const drawLength = pathLength * scrollPercentage;
   const drawLength2 = svgTextLength * scrollPercentage2;
+  console.log('DrawLength',drawLength2);
 
   // path.style.strokeDashoffset = pathLength - drawLength;
   svgText.style.strokeDashoffset = svgTextLength - drawLength2;
