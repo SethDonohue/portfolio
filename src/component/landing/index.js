@@ -134,7 +134,7 @@ class Landing extends Component {
             </div>
           </div>
           <section className="jumbotron">
-            <h1 id="welcome-header" >Welcome to My Portfolio</h1>
+            <h1 className="section-header welcome-header" >Welcome</h1>
             <br />
           </section>
           <section className="intro" >
@@ -147,6 +147,8 @@ class Landing extends Component {
             </p>
 
           </section>
+          <h1 className="section-header portfolio-header" >Portfolio</h1>
+          
 
           <div className="grid">
 
