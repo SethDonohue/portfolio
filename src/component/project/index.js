@@ -3,6 +3,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './_project.scss';
 
+// TODO: REFACTOR to actually pass as props from a JSON/Data file
 import image1 from '../../image/landingCroppedFull.jpg';
 import image2 from '../../image/Peek Create Room2.gif';
 import image3 from '../../image/VotersJoiningVoting.gif';
@@ -15,10 +16,6 @@ const transitionTime = 1000;
 class Project extends Component {
   state = {
     imgSrc: image1,
-  }
-
-  componentWillUpdate() {
-    console.log('willupodatetriggered');
   }
 
   render() {
