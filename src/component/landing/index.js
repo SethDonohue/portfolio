@@ -8,13 +8,22 @@ import Project from '../project';
 // import AuthForm from '../auth-form';
 // import { signupAction, loginAction, logoutAction } from '../../action/auth';
 
+// Image import
+import firepollsLandingJPG from '../../image/landingCroppedFull.jpg';
+import firepollsCreateRoomGIF from '../../image/Peek Create Room2.gif';
+import firepollsVotersJoinGIF from '../../image/VotersJoiningVoting.gif';
+import firepollsLiveAnonGIF from '../../image/LiveAnnonymousVoting.gif';
+
+import layoutGenFullPNG from '../../image/LayoutGenerator.png';
+import layoutGenAnimationGIF from '../../image/LayoutGeneratorFULL.gif';
+
 import './_landing.scss';
 
 // Defining State Here
 const defaultState = {
   projects: [
     { 
-      images: ['/src/image/landingCroppedFull.jpg', '/src/image/Peek Create Room2.gif', '/src/image/VotersJoiningVoting.gif', '/src/image/LiveAnnonymousVoting.gif'],
+      images: [firepollsLandingJPG, firepollsCreateRoomGIF, firepollsVotersJoinGIF, firepollsLiveAnonGIF],
       content: {
         featureOneTitle: 'Simple',
         featureOneContent: 'Easy and fast to use. Create a room, have voters join it and create the first question to begin polling.',
@@ -31,7 +40,7 @@ const defaultState = {
       icons: ['default', 'checkmark', 'stopwatch', 'users'],      
     },
     { 
-      images: ['/src/image/LayoutGenerator.png', '/src/image/LayoutGeneratorFULL.gif', '/src/image/LayoutGeneratorFULL.gif', '/src/image/LayoutGeneratorFULL.gif'],
+      images: [layoutGenFullPNG, layoutGenAnimationGIF, layoutGenAnimationGIF, layoutGenAnimationGIF],
       content: {
         featureOneTitle: 'Simple',
         featureOneContent: 'Choose a template. Choose a Color, with or without a background. Get your code.',
