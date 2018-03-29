@@ -27,7 +27,7 @@ window.addEventListener('scroll', (event) => {
   (document.documentElement.scrollHeight - document.documentElement.clientHeight);
   // console.log('Scroll %', scrollPercentage2);
   // const drawLength = pathLength * scrollPercentage;
-  const drawLength2 = svgTextLength * scrollPercentage2;
+  const drawLength2 = (svgTextLength * scrollPercentage2) / 2;
   // console.log('DrawLength',drawLength2);
 
   // path.style.strokeDashoffset = pathLength - drawLength;
@@ -40,7 +40,7 @@ window.addEventListener('scroll', (event) => {
   // } else {
     // path.style.strokeDasharray = `${pathLength} ${pathLength}`;
   // }
-  if (scrollPercentage2 >= 0.45) {
+  if (scrollPercentage2 >= 0.99) {
     svgText.style.strokeDasharray = 'none';
   } else {
     svgText.style.strokeDasharray = `${svgTextLength} ${svgTextLength}`;
