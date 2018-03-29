@@ -23,7 +23,12 @@ import './_landing.scss';
 const defaultState = {
   projects: [
     { 
-      images: [firepollsLandingJPG, firepollsCreateRoomGIF, firepollsVotersJoinGIF, firepollsLiveAnonGIF],
+      images: [
+        firepollsLandingJPG,
+        firepollsCreateRoomGIF,
+        firepollsVotersJoinGIF,
+        firepollsLiveAnonGIF,
+      ],
       content: {
         featureOneTitle: 'Simple',
         featureOneContent: 'Easy and fast to use. Create a room, have voters join it and create the first question to begin polling.',
@@ -40,7 +45,12 @@ const defaultState = {
       icons: ['default', 'checkmark', 'stopwatch', 'users'],      
     },
     { 
-      images: [layoutGenFullPNG, layoutGenAnimationGIF, layoutGenAnimationGIF, layoutGenAnimationGIF],
+      images: [
+        layoutGenFullPNG,
+        layoutGenAnimationGIF,
+        layoutGenAnimationGIF,
+        layoutGenAnimationGIF,
+      ],
       content: {
         featureOneTitle: 'Simple',
         featureOneContent: 'Choose a template. Choose a Color, with or without a background. Get your code.',
@@ -122,7 +132,8 @@ class Landing extends Component {
           <div className="header">
             <div className="container-fluid">
               <a href="/">
-                <h1 className="logo">             
+                <h1 className="logo">
+                                             
                   <svg id="svg-logo" width="150" height="100" viewBox="0 0 400 250" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     {/* TODO: Move this to a separate file for readability} */}
                   
@@ -139,7 +150,7 @@ class Landing extends Component {
           </section>
           <section className="intro" >
             <p> Thanks for checking out my Portfolio. <br />
-            It is developed with ReactJS, Node.js, Babel, Webpack and SaSS. <br /> <br />
+            It is developed with React, Node.js, Babel, Webpack and SaSS. <br /> <br />
             Take a look at the projects below to see a summary of their technologies and features.
               
               {/* TODO: ADD JS code as description of who I am } */}
