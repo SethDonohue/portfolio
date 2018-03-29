@@ -18,31 +18,33 @@ class Project extends Component {
     imgSrc: image1,
   }
 
+  featureOneImgSrcSet = () => {
+    this.setState({
+      imgSrc: image2,
+    });
+  };
+  featureTwoImgSrcSet = () => {
+    this.setState({
+      imgSrc: image3,
+    });
+  };
+  featureThreeImgSrcSet = () => {
+    this.setState({
+      imgSrc: image4,
+    });
+  };
+
+  featureFourImgSrcSet = () => {
+    this.setState({
+      imgSrc: image1,
+    });
+  };
+
+
   render() {
     // These are defined for multiple uses for OnMouseOver & onFocus for
     // Accessability as determined by a11y standards (https://a11yproject.com/)
     
-    const featureOneImgSrcSet = () => {
-      this.setState({
-        imgSrc: image2,
-      });
-    };
-    const featureTwoImgSrcSet = () => {
-      this.setState({
-        imgSrc: image3,
-      });
-    };
-    const featureThreeImgSrcSet = () => {
-      this.setState({
-        imgSrc: image4,
-      });
-    };
-
-    const featureFourImgSrcSet = () => {
-      this.setState({
-        imgSrc: image1,
-      });
-    };
 
     return (
       <div className="project-item" >
@@ -61,8 +63,8 @@ class Project extends Component {
           <li 
             className="feature"
             id="featureOne"
-            onMouseOver={featureOneImgSrcSet}
-            onFocus={featureOneImgSrcSet}
+            onMouseOver={this.featureOneImgSrcSet}
+            onFocus={this.featureOneImgSrcSet}
           > 
             <svg className="icons icons-stopwatch" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
               <title>check</title>
@@ -81,8 +83,8 @@ class Project extends Component {
           <li 
             className="feature"
             id="featureTwo"
-            onMouseOver={featureTwoImgSrcSet}
-            onFocus={featureTwoImgSrcSet}
+            onMouseOver={this.featureTwoImgSrcSet}
+            onFocus={this.featureTwoImgSrcSet}
           > 
             <svg className="icons icons-stats-bars" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
               <title>stopwatch</title>
@@ -102,8 +104,8 @@ class Project extends Component {
           <li 
             className="feature"
             id="featureThree"
-            onMouseOver={featureThreeImgSrcSet}
-            onFocus={featureThreeImgSrcSet}
+            onMouseOver={this.featureThreeImgSrcSet}
+            onFocus={this.featureThreeImgSrcSet}
           > 
             <svg className="icons icons-users" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 48">
               <title>users</title>
@@ -125,8 +127,8 @@ class Project extends Component {
           <li 
             className="feature"
             id="featureFour"
-            onMouseOver={featureFourImgSrcSet}
-            onFocus={featureFourImgSrcSet}
+            onMouseOver={this.featureFourImgSrcSet}
+            onFocus={this.featureFourImgSrcSet}
           > 
             <img className="feature-img" src={this.state.featureFourSrc} alt="" />            
             <section>
