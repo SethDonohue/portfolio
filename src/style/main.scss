@@ -3,14 +3,11 @@
 
 
 body {
-  // background-image: linear-gradient(to bottom, rgba(255,255,255,.45) 5%, rgba(255,255,255,.01) 35%, rgba(255,255,255,.35) 90%), 
-        // url('../image/bird-pattern.png');
+  background-color: $primary-black;
   font-family: Lato, sans-serif;
   max-width: 1080px;
   margin: 0 auto;
-  // background: -webkit-linear-gradient(148deg, rgb(42, 155, 255), rgb(31, 52, 71));
-  // background: linear-gradient(148deg, rgb(42, 155, 255), rgb(31, 52, 71));
-
+  color: $primary-white;
 }
 
 a {
@@ -46,14 +43,6 @@ h2 {
   transform-origin: 25% 25%;
   transition: all 2s;
   transition-timing-function: ease-in-out;
-  // polygon {
-  //   fill: rgb(218, 218, 218);
-  //   fill-opacity: 0.05;
-  //   stroke: rgb(218, 218, 218);
-  //   stroke-opacity: 0.5;
-  //   stroke-width: 25px;
-  //   stroke-linejoin: round;
-  // }
 }
 .svg-background-text {
   right: -90px;
@@ -68,43 +57,22 @@ h2 {
   transform-origin: 25% 25%;
   transition: all 2s;
   transition-timing-function: ease-in-out;
-  // polygon {
-  //   fill: rgb(218, 218, 218);
-  //   fill-opacity: 0.05;
-  //   stroke: rgb(218, 218, 218);
-  //   stroke-opacity: 0.5;
-  //   stroke-width: 25px;
-  //   stroke-linejoin: round;
-  // }
+  fill: transparent;
+  stroke: $primary-white;
+  stroke-opacity: 0.4;
+  stroke-width: 5px;
+ 
 }
 
-#background-path {
-  fill: transparent;
-  stroke: rgb(218, 218, 218);
-  stroke-opacity: 0.0;
-  stroke-width: 20px;
-}
-
-#background-text-one, #background-text-two {
-  fill: transparent;
-  stroke: rgb(218, 218, 218);
-  stroke-opacity: 0.05;
-  stroke-width: 80px;
-}
-// #background-path-2 {
+// #background-path {
 //   fill: transparent;
-//   // fill-opacity: 0.05;
-//   stroke: rgb(139, 139, 139);
-//   stroke-opacity: 0.15;
-//   stroke-width: 1080px;
-//   // stroke-linejoin: round;
+//   stroke: rgb(218, 218, 218);
+//   stroke-opacity: 0.0;
+//   stroke-width: 20px;
+  
 // }
 
-// .svg-background:hover {
-//   transform: scale(100.5) rotate(90deg);
-// }
 //General on page-load fade-in for all browsers
-
 main {
 
     -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 11.5.1 */

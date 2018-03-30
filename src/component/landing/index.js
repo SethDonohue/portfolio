@@ -182,10 +182,7 @@ class Landing extends Component {
 
             <div className="feature-center" key="1">
               <h2><a href="https://sethdonohue.github.io/layout-generator" target="_blank" rel="noopener noreferrer">Layout Generator <br /> sethdonohue.github.io/layout-generator</a></h2>
-              <p className="summary"> A school oriented app that allows for quick,
-                anonymous, opinion polling on any topic.
-                Create a room, invite others too it and send out questions to get responses
-                from the voters.
+              <p className="summary"> A simple and easy code generator that lets the user chose a few key characteristics for a layout, changes them on the fly, and outputs easy to deal with code.
               </p>
 
               <Project

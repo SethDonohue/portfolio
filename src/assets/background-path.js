@@ -23,10 +23,16 @@ window.addEventListener('scroll', (event) => {
 
   // At end of scrolling make shape complete as
   // the end of the path won't match properly due to dashing, so move dash array
-  if (scrollPercentage2 >= 0.99) {
+  if (scrollPercentage2 >= 0.95) {
     svgText.style.strokeDasharray = 'none';
+    svgText.style.cssText = 'transition: 1.0s; stroke-width: 15px';
+    // Or
+    // svgText.css({ fill: "red", transition: "2.0s" });
   } else {
     svgText.style.strokeDasharray = `${svgTextLength} ${svgTextLength}`;
+    // svgText.style.cssText = "transition: 1.0s";
+    svgText.style.strokeWidth = '5px';    
+    // svgText.style.cssText = "transition: 0s;";
   }
 });
 
