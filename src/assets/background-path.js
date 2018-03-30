@@ -30,7 +30,7 @@ window.addEventListener('scroll', (event) => {
     // svgText.css({ fill: "red", transition: "2.0s" });
   } else {
     svgText.style.strokeDasharray = `${svgTextLength} ${svgTextLength}`;
-    // svgText.style.cssText = "transition: 1.0s";
+    // svgText.style.cssText = "transition: 0.1s";
     svgText.style.strokeWidth = '5px';    
     // svgText.style.cssText = "transition: 0s;";
   }
