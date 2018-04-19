@@ -1,7 +1,7 @@
 @import '_vars';
 
 .project-item {
-  color: rgb(125, 125, 125);
+  color: $primary-gray;
   height: 450px;
   max-width: 1080px;
   margin-top: 0.5vw;
@@ -80,7 +80,7 @@
   }
   &:hover {
   transform: $primary-scale $link-translate;
-  color: $primary-gray;
+  color: $primary-black;
   .icons{
     fill: $primary-green;
   }
