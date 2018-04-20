@@ -18,6 +18,8 @@ class App extends Component {
     return (
       <Fragment>
         {/*<NavWrapper />*/}
+        
+        <svg className="svg-background-text" ><use xlinkHref="#background-text" viewBox=" 0 0 400 400" /></svg>
         <BrowserRouter>
           <div className="app">
             <MetaTags>
