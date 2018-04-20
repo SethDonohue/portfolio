@@ -60,7 +60,7 @@ class Project extends Component {
         
         <ul className="feature-list" >
           <li 
-            className="feature"
+            className="feature-item"
             id="featureOne"
             onMouseOver={this.featureOneImgSrcSet}
             onFocus={this.featureOneImgSrcSet}
@@ -75,7 +75,7 @@ class Project extends Component {
           </li>
           {/* TODO: Refactor into a map for each <li> */}
           <li 
-            className="feature"
+            className="feature-item"
             id="featureTwo"
             onMouseOver={this.featureTwoImgSrcSet}
             onFocus={this.featureTwoImgSrcSet}
@@ -91,7 +91,7 @@ class Project extends Component {
           </li>
 
           <li 
-            className="feature"
+            className="feature-item"
             id="featureThree"
             onMouseOver={this.featureThreeImgSrcSet}
             onFocus={this.featureThreeImgSrcSet}
@@ -105,7 +105,7 @@ class Project extends Component {
           </li>
 
           <li 
-            className="feature"
+            className="feature-item"
             id="featureFour"
             onMouseOver={this.featureFourImgSrcSet}
             onFocus={this.featureFourImgSrcSet}
