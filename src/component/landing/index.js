@@ -157,19 +157,20 @@ class Landing extends Component {
             </div>
           </div>
           <section className="jumbotron">
-            <h1 id="welcome-header" >Welcome to My Portfolio</h1>
-            <br />
+            <div className="typewriter">
+              <h1>Welcome to My Portfolio.</h1>
+            </div>
           </section>
-          <section className="intro" >
+          {/* <section className="intro" >
             <p> Thanks for checking out my portfolio. <br />
             It is being developed with ReactJS, Node.js, Babel, Webpack and SaSS. <br /> <br />
             Take a look at the projects below to see a summary of their technologies and features.
               
-              {/* TODO: ADD JS code as description of who I am } */}
+              {/* TODO: ADD JS code as description of who I am }
               
             </p>
 
-          </section>
+    </section> */}
 
           <div className="grid">
 

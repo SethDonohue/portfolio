@@ -52,9 +52,9 @@
     }
   }
 
-  .logo:hover{
-    // transform: translate(15px, 0);
-  }
+  // .logo:hover{
+  //   // transform: translate(15px, 0);
+  // }
 
   @keyframes welcome-animation {
   from { opacity: 0; margin-right: -500px; }
@@ -64,10 +64,17 @@
 
   #welcome-header {
   font-size: 2.5em;
-  animation-name: welcome-animation;
-  animation-duration: 3s;
+  // animation-name: welcome-animation;
+  // animation-duration: 3s;
   white-space: nowrap;
 }
+
+//   .typewriter h1 {
+//   font-size: 2.5em;
+//   // animation-name: welcome-animation;
+//   // animation-duration: 3s;
+//   white-space: nowrap;
+// }
 
   // .nav-items {
   //   padding: 0;
@@ -123,9 +130,10 @@
 // }
 
 .jumbotron {
-  // padding-top: 2vw;
-  text-align: center;
+  display: flex;
+  text-align: right;
   background-color: transparent;
+  justify-content: center;
   
   @media only screen and (min-width: 600px) {
     // padding-top: 40px;
@@ -161,6 +169,34 @@
     font-size: 120%;
   }
 }
+
+.typewriter h1 {
+  color: black;
+  text-align: right;
+  display: flex;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 40px auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+
 
 .grid {  
   margin-top: 2em;
