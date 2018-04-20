@@ -27,7 +27,8 @@ import './_landing.scss';
 const defaultState = {
   projects: [
     { 
-      images: [firepollsLandingJPG, firepollsCreateRoomGIF, firepollsVotersJoinGIF, firepollsLiveAnonGIF],
+      images: [firepollsLandingJPG, firepollsCreateRoomGIF,
+        firepollsVotersJoinGIF, firepollsLiveAnonGIF],
       content: {
         featureOneTitle: 'Simple',
         featureOneContent: 'Easy and fast to use. Create a room, have voters join it and create the first question to begin polling.',
@@ -44,7 +45,8 @@ const defaultState = {
       icons: ['default', 'checkmark', 'stopwatch', 'users'],      
     },
     { 
-      images: [layoutGenFullPNG, layoutGenAnimationGIF, layoutGenAnimationGIF, layoutGenAnimationGIF],
+      images: [layoutGenFullPNG, layoutGenAnimationGIF,
+        layoutGenAnimationGIF, layoutGenAnimationGIF],
       content: {
         featureOneTitle: 'Easy',
         featureOneContent: 'Choose a template. Choose a Color, with or without a background. Get your code.',
