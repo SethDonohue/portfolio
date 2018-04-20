@@ -40,7 +40,7 @@ const defaultState = {
         featureThreeContent: 'Keep track of how many people have responded to a poll while keeping votes anonymous.',
 
         featureFourTitle: 'Main Technologies',
-        featureFourContent: 'JavaScript, Socket IO, Babel, MongoDB, Heroku & Continuous Deployment, Travis Continuous Integration, React, Redux, Material UI, Artillery (Load Testing), Jest (TDD), Webpack, Express, Node.',
+        featureFourContent: 'JavaScript, Socket IO, Babel, MongoDB, Heroku & Continuous Deployment, Travis Continuous Integration, React, Redux, Material UI, Artillery, Jest, Webpack, Express, Node.',
       },
       icons: ['default', 'checkmark', 'stopwatch', 'users'],      
     },
