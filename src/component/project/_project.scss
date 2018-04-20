@@ -25,9 +25,9 @@
 }
 
 .screenshot {
-  border: solid 3px $primary-blue;
+  border: solid 3px gray;
   border-radius: 5px;
-  box-shadow: 5px 2px 2px $primary-blue-transparent;
+  // box-shadow: 2px 2px 2px gray;
   width: 95%;
   position: absolute;
   transition: all $transition-fast ease;
@@ -47,7 +47,7 @@
   height: 100%; 
 }
 
-.feature {
+.feature-item {
   display: grid;
   grid-template-columns: 20% 80%;
   justify-items: center;  
