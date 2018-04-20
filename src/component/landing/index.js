@@ -17,6 +17,10 @@ import firepollsLiveAnonGIF from '../../image/LiveAnnonymousVoting.gif';
 import layoutGenFullPNG from '../../image/LayoutGenerator.png';
 import layoutGenAnimationGIF from '../../image/LayoutGeneratorFULL.gif';
 
+import noncentsReadmePNG from '../../image/noncentReadme.png';
+import noncentsChainPNG from '../../image/noncentschain.png';
+import noncentsConsolePNG from '../../image/Mining.png';
+
 import './_landing.scss';
 
 // Defining State Here
@@ -35,14 +39,14 @@ const defaultState = {
         featureThreeContent: 'Keep track of how many people have responded to a poll while keeping votes anonymous.',
 
         featureFourTitle: 'Main Technologies',
-        featureFourContent: 'JavaScript, Socket IO, Babel, MongoDB, Heroku & Continuous Deployment, Travis Continuous Integration, React, Redux, Material UI, Artillery(Load Testing), Jest(Test Driven Development), Webpack, Express, Node.',
+        featureFourContent: 'JavaScript, Socket IO, Babel, MongoDB, Heroku & Continuous Deployment, Travis Continuous Integration, React, Redux, Material UI, Artillery (Load Testing), Jest (TDD), Webpack, Express, Node.',
       },
       icons: ['default', 'checkmark', 'stopwatch', 'users'],      
     },
     { 
       images: [layoutGenFullPNG, layoutGenAnimationGIF, layoutGenAnimationGIF, layoutGenAnimationGIF],
       content: {
-        featureOneTitle: 'Simple',
+        featureOneTitle: 'Easy',
         featureOneContent: 'Choose a template. Choose a Color, with or without a background. Get your code.',
 
         featureTwoTitle: 'Live Changes',
@@ -55,6 +59,23 @@ const defaultState = {
         featureFourContent: 'JavaScript, HTML5, CSS3',
       },
       icons: ['default', 'clipboard', 'feed', 'embed2'],
+    },
+    { 
+      images: [noncentsReadmePNG, noncentsConsolePNG, noncentsChainPNG, noncentsReadmePNG],
+      content: {
+        featureOneTitle: 'Node-to-Node Mining',
+        featureOneContent: 'Hooked up to allow nodes to mine and validate the blocks posted to the network.',
+
+        featureTwoTitle: 'Chain Persistance',
+        featureTwoContent: 'See the stored block chain at anytime with a simple get request.',
+
+        featureThreeTitle: 'Easily Expandable',
+        featureThreeContent: 'Grab the code, launch your own node and being mining in just a few minutes.',
+
+        featureFourTitle: 'Main Technologies',
+        featureFourContent: 'JavaScript, Node, Express, MongoDB, Heroku, Travis CI, Jest',
+      },
+      icons: ['default', 'display', 'link', 'enlarge'],
     },
   
   
@@ -139,7 +160,7 @@ class Landing extends Component {
           </section>
           <section className="intro" >
             <p> Thanks for checking out my Portfolio. <br />
-            It is developed with ReactJS, Node.js, Babel, Webpack and SaSS. <br /> <br />
+            It is under construction and being developed with ReactJS, Node.js, Babel, Webpack and SaSS. <br /> <br />
             Take a look at the projects below to see a summary of their technologies and features.
               
               {/* TODO: ADD JS code as description of who I am } */}
@@ -169,10 +190,7 @@ class Landing extends Component {
 
             <div className="feature-center" key="1">
               <h2><a href="https://sethdonohue.github.io/layout-generator" target="_blank" rel="noopener noreferrer">Layout Generator <br /> sethdonohue.github.io/layout-generator</a></h2>
-              <p className="summary"> A school oriented app that allows for quick,
-                anonymous, opinion polling on any topic.
-                Create a room, invite others too it and send out questions to get responses
-                from the voters.
+              <p className="summary"> A quick and easy to use website template generator.
               </p>
 
               <Project
@@ -226,6 +244,45 @@ class Landing extends Component {
               https://sethdonohue.github.io/layout-generator/</a></p>
               <p>GitHub Repo: <a href="https://github.com/SethDonohue/layout-generator">
               https://github.com/SethDonohue/layout-generator</a></p> */}
+            </div> 
+
+            <div className="feature-right" key="2">
+              <h2><a href="https://github.com/HashMoney/Noncents" target="_blank" rel="noopener noreferrer"> Noncents Blockchain <br /> https://github.com/HashMoney/Noncents</a></h2>
+              <p className="summary"> A JavaScript based blockchain built as a technology experiement to understand more about JavaScript, it's limits, and what a blockchain actually is.
+              </p>
+
+              <Project
+                images={this.state.projects[2].images}
+                content={this.state.projects[2].content}
+                icons={this.state.projects[2].icons}
+              />
+                                      
+              {/*
+                TODO: ADD MORE PROJECTS
+              <Project />
+              
+              <img src="https://i.imgur.com/RLqWOTH.png" alt="Analytics" />
+              <h2><a href="https://github.com/HashMoney/Noncents">Noncents</a></h2>
+              <h4>Jan 2018 – Jan 2018</h4>
+
+              <p className="feature-desc">A purely back-end Blockchain 
+              project with persistent chain storage and peer-to-peer mining,
+                it is mainly a JavaScript experiment to build, understand and deploy a blockchain.
+              </p>
+              
+              <p className="feature-desc">Noncents was built in 5 days and allows for
+              multiple servers to mine for blocks and get their block validated by the
+              main chain verification server hosted on Heroku.
+              It uses JavaScript, MongoDB, and RESTful API practices to implement all
+              of the features.
+              </p>
+
+              <p>Live Raw Chain: <a href="http://noncents.herokuapp.com/chain">http://noncents.herokuapp.com/chain</a></p>
+              <p>GitHub Repo: <a href="https://github.com/HashMoney/Noncents">https://github.com/HashMoney/Noncents</a></p>
+            </div>
+            <div className="feature-right" key="2">
+              <h2> Project Title </h2>            
+              <Project /> */}
             </div> 
           </div>
           {/* TODO: ADD GITHUB SYMBOL} */}
