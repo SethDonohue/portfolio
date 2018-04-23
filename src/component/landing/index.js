@@ -40,7 +40,7 @@ const defaultState = {
         featureThreeContent: 'Keep track of how many people have responded to a poll while keeping votes anonymous.',
 
         featureFourTitle: 'Main Technologies',
-        featureFourContent: 'JavaScript, Socket IO, Babel, MongoDB, Heroku & Continuous Deployment, Travis Continuous Integration, React, Redux, Material UI, Artillery, Jest, Webpack, Express, Node.',
+        featureFourContent: 'JavaScript, Socket IO, Babel, MongoDB, Heroku, Continuous Deployment, Travis Continuous Integration, React, Redux, Material UI, Artillery, Jest, Webpack, Express, Node.',
       },
       icons: ['default', 'checkmark', 'stopwatch', 'users'],      
     },
@@ -174,9 +174,9 @@ class Landing extends Component {
 
           <div className="grid">
 
-            <div className="feature feature-left" key="0">
+            <div className="project project-left" key="0">
               {/* TODO: MOVE <h2> <p> to project */}
-              <h2><a href="http://firepolls.com" target="_blank" rel="noopener noreferrer">Firepolls <br /> www.firepolls.com</a></h2>
+              <h2><a href="http://firepolls.com" target="_blank" rel="noopener noreferrer">Firepolls</a></h2>
               <p className="summary"> A school oriented app that allows for quick,
                 anonymous, opinion polling on any topic.
                 Create a room, invite others too it and send out questions to get responses
@@ -191,8 +191,8 @@ class Landing extends Component {
 
             </div>
 
-            <div className="feature feature-center" key="1">
-              <h2><a href="https://sethdonohue.github.io/layout-generator" target="_blank" rel="noopener noreferrer">Layout Generator <br /> sethdonohue.github.io/layout-generator</a></h2>
+            <div className="project project-center" key="1">
+              <h2><a href="https://sethdonohue.github.io/layout-generator" target="_blank" rel="noopener noreferrer">Layout Generator</a></h2>
               <p className="summary"> A quick and easy to use website template generator.
               </p>
 
@@ -202,55 +202,11 @@ class Landing extends Component {
                 icons={this.state.projects[1].icons}
               />
                                       
-              {/*
-                TODO: ADD MORE PROJECTS
-              <Project />
-              
-              <img src="https://i.imgur.com/RLqWOTH.png" alt="Analytics" />
-              <h2><a href="https://github.com/HashMoney/Noncents">Noncents</a></h2>
-              <h4>Jan 2018 – Jan 2018</h4>
-
-              <p className="feature feature-desc">A purely back-end Blockchain 
-              project with persistent chain storage and peer-to-peer mining,
-                it is mainly a JavaScript experiment to build, understand and deploy a blockchain.
-              </p>
-              
-              <p className="feature feature-desc">Noncents was built in 5 days and allows for
-              multiple servers to mine for blocks and get their block validated by the
-              main chain verification server hosted on Heroku.
-              It uses JavaScript, MongoDB, and RESTful API practices to implement all
-              of the features.
-              </p>
-
-              <p>Live Raw Chain: <a href="http://noncents.herokuapp.com/chain">http://noncents.herokuapp.com/chain</a></p>
-              <p>GitHub Repo: <a href="https://github.com/HashMoney/Noncents">https://github.com/HashMoney/Noncents</a></p>
-            </div>
-            <div className="feature feature-right" key="2">
-              <h2> Project Title </h2>            
-              <Project />
-            
-              {/*
-              <img src="https://i.imgur.com/DwpqLpv.png" alt="Anonymous Voting" />
-              <h1><a href="https://sethdonohue.github.io/layout-generator/">Layout Generator</a></h1>
-              <h4>Dec 2017 – Dec 2017</h4>
-
-              <p className="feature feature-desc">Layout Generator allows a user 
-              to follow a simple flow through the website, choose a layout 
-              colors/background, and get all the HTML, CSS and JS code 
-              required to use the template for their own website.
-              </p>
-
-              <p className="feature feature-desc">It was built in 4 days and was 
-              designed to be extremely easy to use.</p>
-
-              <p>Live Site: <a href="https://sethdonohue.github.io/layout-generator/">
-              https://sethdonohue.github.io/layout-generator/</a></p>
-              <p>GitHub Repo: <a href="https://github.com/SethDonohue/layout-generator">
-              https://github.com/SethDonohue/layout-generator</a></p> */}
+              {/* TODO: ADD MORE PROJECTS */}
             </div> 
 
-            <div className="feature feature-right" key="2">
-              <h2><a href="https://github.com/HashMoney/Noncents" target="_blank" rel="noopener noreferrer"> Noncents Blockchain <br /> https://github.com/HashMoney/Noncents</a></h2>
+            <div className="project project-right" key="2">
+              <h2><a href="https://github.com/HashMoney/Noncents" target="_blank" rel="noopener noreferrer"> Noncents Blockchain</a></h2>
               <p className="summary"> A JavaScript based blockchain built as a technology experiement to understand more about JavaScript, it's limits, and what a blockchain actually is.
               </p>
 
@@ -268,12 +224,12 @@ class Landing extends Component {
               <h2><a href="https://github.com/HashMoney/Noncents">Noncents</a></h2>
               <h4>Jan 2018 – Jan 2018</h4>
 
-              <p className="feature feature-desc">A purely back-end Blockchain 
+              <p className="project project-desc">A purely back-end Blockchain 
               project with persistent chain storage and peer-to-peer mining,
                 it is mainly a JavaScript experiment to build, understand and deploy a blockchain.
               </p>
               
-              <p className="feature feature-desc">Noncents was built in 5 days and allows for
+              <p className="project project-desc">Noncents was built in 5 days and allows for
               multiple servers to mine for blocks and get their block validated by the
               main chain verification server hosted on Heroku.
               It uses JavaScript, MongoDB, and RESTful API practices to implement all
@@ -283,7 +239,7 @@ class Landing extends Component {
               <p>Live Raw Chain: <a href="http://noncents.herokuapp.com/chain">http://noncents.herokuapp.com/chain</a></p>
               <p>GitHub Repo: <a href="https://github.com/HashMoney/Noncents">https://github.com/HashMoney/Noncents</a></p>
             </div>
-            <div className="feature feature-right" key="2">
+            <div className="project project-right" key="2">
               <h2> Project Title </h2>            
               <Project /> */}
             </div> 
