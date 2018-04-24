@@ -246,7 +246,14 @@ class Landing extends Component {
           </div>
           {/* TODO: ADD GITHUB SYMBOL} */}
           <footer className="footer">
-            <p><a href="https://github.com/sethdonohue" target="_blank" rel="noopener noreferrer"> © 2018 Seth Donohue on GitHub</a></p>
+            <a href="https://github.com/sethdonohue" target="_blank" rel="noopener noreferrer">
+              <svg className="icons-footer icon-github" width="50" height="50" ><use xlinkHref="#icon-github" viewBox="0 0 64 64" /></svg>
+            </a>
+
+            <a href="https://www.linkedin.com/in/sethdonohue/" target="_blank" rel="noopener noreferrer">
+              <svg className="icons-footer icon-linkedin" width="50" height="50" ><use xlinkHref="#icon-linkedin" viewBox="0 0 64 64" /></svg>
+            </a>
+            <p>© 2018 Seth Donohue</p>
           </footer>
         </div>
       </Fragment>
