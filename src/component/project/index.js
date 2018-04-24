@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react';
-// import { connect } from 'react-redux';
-
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import './_project.scss';
@@ -81,7 +79,6 @@ class Project extends Component {
             onFocus={this.featureTwoImgSrcSet}
           > 
 
-            {/* TODO: MOVE to separate file for readability} */}
             <svg className={`icons icon-${icons[2]}`} ><use xlinkHref={`#icon-${icons[2]}`} viewBox="0 0 32 32" /></svg>
 
             <section>
@@ -121,9 +118,4 @@ class Project extends Component {
   }
 }
 
-// const mapStateToProps = state => ({
-//   images: state.images, // array
-//   content: state.content, // object
-// });
 export default Project;
-// export default connect(mapStateToProps)(Project);
