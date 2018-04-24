@@ -1,12 +1,7 @@
 import { connect } from 'react-redux';
 import React, { Component, Fragment } from 'react';
-// import { RaisedButton, TextField } from 'material-ui';
-// import muiThemeable from 'material-ui/styles/muiThemeable';
 
 import Project from '../project';
-
-// import AuthForm from '../auth-form';
-// import { signupAction, loginAction, logoutAction } from '../../action/auth';
 
 // Image import
 import firepollsLandingJPG from '../../image/landingCroppedFull.jpg';
@@ -23,7 +18,8 @@ import noncentsConsolePNG from '../../image/Mining.png';
 
 import './_landing.scss';
 
-// Defining State Here
+// Defining State Here TODO: Move this INFO to Database
+
 const defaultState = {
   projects: [
     { 
@@ -82,11 +78,7 @@ const defaultState = {
   
   
   ],
-  
-  // signingUp: false,
-  // loggingIn: false,
 };
-
 
 class Landing extends Component {
   state = defaultState;
@@ -94,51 +86,6 @@ class Landing extends Component {
   emptyState = { ...this.state };
 
   render() {
-    // const {
-    //   ,
-    //   content,
-    // } = this.state;
-
-    // console.log('Landing State', this.state);
-    
-    // console.log('Landing Props', this.props);
-    // console.log('Landing Images', images);
-    
-    // const {
-    //   signup,
-    //   login,
-    //   logout,
-    // } = this.props;
-
-    // const signupLoginJSX = (
-    //   <ul className="nav-items">
-    //     <li>
-    //       <RaisedButton
-    //         onClick={() =>
-    //           this.setState(previousState => ({
-    //             signingUp: !previousState.signingUp,
-    //             loggingIn: false,
-    //           }))
-    //         }
-    //       >
-    //         Signup
-    //       </RaisedButton>
-    //     </li>
-    //     <li>
-    //       <RaisedButton
-    //         onClick={() =>
-    //           this.setState(previousState => ({
-    //             signingUp: false,
-    //             loggingIn: !previousState.loggingIn,
-    //           }))
-    //         }
-    //       >
-    //         Login
-    //       </RaisedButton>
-    //     </li>
-    //   </ul>
-    // );
-
     return (
       <Fragment>
         <div className="landing-frag">
@@ -161,17 +108,6 @@ class Landing extends Component {
               <h1>Welcome to My Portfolio.</h1>
             </div>
           </section>
-          {/* <section className="intro" >
-            <p> Thanks for checking out my portfolio. <br />
-            It is being developed with ReactJS, Node.js, Babel, Webpack and SaSS. <br /> <br />
-            Take a look at the projects below to see a summary of their technologies and features.
-              
-              {/* TODO: ADD JS code as description of who I am }
-              
-            </p>
-
-    </section> */}
-
           <div className="grid">
 
             <div className="project project-left" key="0">
@@ -202,7 +138,6 @@ class Landing extends Component {
                 icons={this.state.projects[1].icons}
               />
                                       
-              {/* TODO: ADD MORE PROJECTS */}
             </div> 
 
             <div className="project project-right" key="2">
@@ -216,35 +151,9 @@ class Landing extends Component {
                 icons={this.state.projects[2].icons}
               />
                                       
-              {/*
-                TODO: ADD MORE PROJECTS
-              <Project />
-              
-              <img src="https://i.imgur.com/RLqWOTH.png" alt="Analytics" />
-              <h2><a href="https://github.com/HashMoney/Noncents">Noncents</a></h2>
-              <h4>Jan 2018 – Jan 2018</h4>
-
-              <p className="project project-desc">A purely back-end Blockchain 
-              project with persistent chain storage and peer-to-peer mining,
-                it is mainly a JavaScript experiment to build, understand and deploy a blockchain.
-              </p>
-              
-              <p className="project project-desc">Noncents was built in 5 days and allows for
-              multiple servers to mine for blocks and get their block validated by the
-              main chain verification server hosted on Heroku.
-              It uses JavaScript, MongoDB, and RESTful API practices to implement all
-              of the features.
-              </p>
-
-              <p>Live Raw Chain: <a href="http://noncents.herokuapp.com/chain">http://noncents.herokuapp.com/chain</a></p>
-              <p>GitHub Repo: <a href="https://github.com/HashMoney/Noncents">https://github.com/HashMoney/Noncents</a></p>
-            </div>
-            <div className="project project-right" key="2">
-              <h2> Project Title </h2>            
-              <Project /> */}
+              {/* TODO: ADD MORE PROJECTS */}
             </div> 
           </div>
-          {/* TODO: ADD GITHUB SYMBOL} */}
           <footer className="footer">
             <a href="https://github.com/sethdonohue" target="_blank" rel="noopener noreferrer">
               <svg className="icons-footer icon-github" width="50" height="50" ><use xlinkHref="#icon-github" viewBox="0 0 64 64" /></svg>
@@ -261,15 +170,4 @@ class Landing extends Component {
   }
 }
 
-// const mapDispatchToProps = dispatch => ({
-// signup: userData => dispatch(signupAction(userData)),
-// login: userData => dispatch(loginAction(userData)),
-// });
-
-// const mapStateToProps = state => ({
-//   images: state.images, // array
-//   content: state.content, // object
-// });
-
 export default Landing;
-// export default connect(mapStateToProps)(Landing);
