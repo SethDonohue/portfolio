@@ -1,20 +1,84 @@
+@import '_vars';
+@import '_react-transitions';
+
 body {
-  background-image: linear-gradient(to bottom, rgba(255,255,255,.45) 5%, rgba(255,255,255,.01) 35%, rgba(255,255,255,.35) 90%), 
-        url('../image/bird-pattern.png');
-  font-family: Lato, sans-serif;
-  max-width: 960px;
-  margin: 0 auto;
+font-family: Lato, sans-serif;
+max-width: 1080px;
+margin: 0 auto;
+background-image: url(../image/topography.png);
+background-repeat: repeat;
+}
+
+a {
+  color: $primary-blue;
+  text-decoration: none;
+  transition-duration: $link-duration;
+  &:hover{
+    transform: $primary-link-translate;
+  }
+}
+
+h2 {
+  font-size: 1.75em;
+  margin: 0 0 0 1vw;
+  text-align: left;
+  max-width: 60%;
+  display: block;
+  transition-duration: $link-duration;
+  &:hover{
+    transform: $primary-link-translate;
+  }
+}
+
+.svg-background {
+  bottom: 0;
+  right: 0;
+  display: block;
+  margin: auto;
+  width: 1080px;
+  height: 1000px;
+  z-index: -1;
+  position: fixed;
+  transform-origin: 25% 25%;
+  transition: all 2s;
+  transition-timing-function: ease-in-out;
+}
+.svg-background-text {
+  right: -90px;
+  bottom: 0;
+  position: fixed;
+  display: block;
+  margin: auto;
+  height: 350px;
+  width: 350px;
+  z-index: -1;
+  position: fixed;
+  transform-origin: 25% 25%;
+  transition: all 2s;
+  transition-timing-function: ease-in-out;
+}
+
+#background-path {
+  fill: transparent;
+  stroke: rgb(218, 218, 218);
+  stroke-opacity: 0.0;
+  stroke-width: 20px;
+}
+
+#background-text-one, #background-text-two {
+  fill: transparent;
+  stroke: rgb(218, 218, 218);
+  stroke-opacity: 0.05;
+  stroke-width: 80px;
 }
 
 //General on page-load fade-in for all browsers
-
 main {
-
-    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 11.5.1 */
-       -moz-animation: fadein 1.5s; /* Firefox < 16 */
-        -ms-animation: fadein 1.5s; /* Internet Explorer */
-         -o-animation: fadein 1.5s; /* Opera < 12.1 */
-            animation: fadein 1.5s;
+  -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 11.5.1 */
+  -moz-animation: fadein 1.5s; /* Firefox < 16 */
+  -ms-animation: fadein 1.5s; /* Internet Explorer */
+  -o-animation: fadein 1.5s; /* Opera < 12.1 */
+  animation: fadein 1.5s;
 }
 
 @keyframes fadein {

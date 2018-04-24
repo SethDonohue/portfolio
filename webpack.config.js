@@ -10,15 +10,17 @@ const webpackConfig = module.exports = {};
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
 webpackConfig.entry = `${__dirname}/src/main.js`;
+
 webpackConfig.output = {
   filename: 'bundle.[hash].js',
   path: `${__dirname}/build`,
   publicPath: process.env.CDN_URL,
-};
+};  
 
 webpackConfig.plugins = [
   new HTMLPlugin({
-    title: 'Fire Polls',
+    title: 'Seth Donohue',
+    template: 'src/assets/index-template.html',
   }),
   new EnvironmentPlugin(['NODE_ENV']),
   new DefinePlugin({

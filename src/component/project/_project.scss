@@ -1,0 +1,138 @@
+@import '_vars';
+
+.project-item {
+  color: rgb(125, 125, 125);
+  height: 450px;
+  max-width: 1080px;
+  margin-top: 0.5vw;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: repeat(4, 25%);
+  align-items: center;
+  text-align: left;
+
+  @media only screen and (max-width: $main-break) {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    height: auto;
+  }
+    
+}
+
+.screenshot-holder {
+  position: relative;
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  grid-row: 1 / span 4;
+  display: grid;
+  align-items: center;
+
+  @media only screen and (max-width: $main-break) {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    height: 51vw;
+  }
+}
+
+.screenshot {
+  border: solid 3px gray;
+  border-radius: 5px;
+  width: 95%;
+  position: absolute;
+  transition: all $transition-fast ease;
+  justify-self: left;
+
+  @media only screen and (max-width: $main-break) {
+    justify-self: center;
+    height: 50vw;
+    width: auto;
+    max-width: 85vw;
+    margin: 5px;
+  }
+}
+
+.feature-list {
+  position: relative;
+  width: 95%;
+  grid-row: 1 / span 4;
+  transition: all $transition-slow ease;
+  margin: 10px auto;
+  padding: 0;
+  height: 100%; 
+  @media only screen and (max-width: $main-break){
+    grid-row: 2 / span 1;
+    padding: 5px;
+  }
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  justify-items: center;  
+  align-items: center;  
+  height: 25%;
+  width: 95%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: all $transition-slow ease-in-out;
+  section {
+    h3 {
+    margin: 0.5vw 0.5vw 0 0.5vw;
+    padding: 0.5vw 0.5vw 0 0.5vw;
+    }
+    p {
+      margin: 0.1vw 0.5vw 0.5vw 0.5vw;
+      padding: 0 0.5vw 0.5vw 0.5vw;
+      text-align: left;
+      font-size: $small-text-size;
+    }
+  }
+  .icons {
+    fill: $primary-gray;
+    transition: all $transition-slow ease;
+    width: $icon-width;
+    height: $icon-height;
+  }
+  &:hover {
+    transform: $primary-scale $primary-link-translate;
+    color: $primary-gray;
+    .icons{
+      fill: $primary-green;
+    }
+  }
+  @media only screen and (max-width:$main-break) {
+    width: 100%;
+    .icons {
+    width: $icon-width-mobile;
+    height: $icon-height-mobile;
+    }
+    &:hover {
+      transform: $mobile-scale;
+      color: $primary-gray;
+      .icons{
+        fill: $primary-green;
+      }
+    }
+  }
+}
+
+#featureFour section {
+  display: inline;
+  grid-column: 1 / span 2;
+  justify-self: left;
+  align-self: flex-start;
+
+  @media only screen and (max-width:$main-break) {
+    justify-self: center;
+    align-self: flex-end;
+    h3 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}

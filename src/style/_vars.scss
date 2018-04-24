@@ -1,6 +1,36 @@
-$primary-red: #EC1940;
+// Break Points
+$main-break: 768px;
 
+// Colors
+$primary-blue: rgb(0, 29, 126);
+$primary-blue-transparent: rgba(0, 29, 126, 0.5);
+$primary-green: rgb(0, 124, 87);
+$primary-gray: rgb(65, 65, 65);
+$primary-black: black;
+
+// Padding and Margin
 $pad: 0.5em;
+$feature-margin: 0 0 5vw 0;
 
+// Fonts
 $font-main: 'Lato', sans-serif;
 $font-mono: 'Roboto Mono', monospace;
+
+// Transitions
+$transition-slow: 0.5s;
+$transition-fast: 0.25s;
+$link-duration: 0.5s;
+$primary-link-translate: translate(15px, 0);
+$primary-scale: scale(1.15);
+$mobile-scale: scale(1.1);
+
+// Text
+$large-text-size: 1.25em;
+$medium-text-size: 1em;
+$small-text-size: 0.9em;
+
+// Icons
+$icon-width: 90%;
+$icon-height: 90%;
+$icon-width-mobile: 80%;
+$icon-height-mobile: 80%;

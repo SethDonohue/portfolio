@@ -3,11 +3,13 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MetaTags from 'react-meta-tags';
 
-import { AppBar } from 'material-ui';
+// import { AppBar } from 'material-ui';
 
 import Landing from '../landing';
 import AuthRedirect from '../auth-redirect';
-import NavWrapper from '../material-ui/nav-wrapper';
+// import NavWrapper from '../material-ui/nav-wrapper';
+
+import '../../assets/background-path';
 
 import './_app.scss';
 
@@ -15,7 +17,9 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <NavWrapper />
+        {/*<NavWrapper />*/}
+        
+        <svg className="svg-background-text" ><use xlinkHref="#background-text" viewBox=" 0 0 400 400" /></svg>
         <BrowserRouter>
           <div className="app">
             <MetaTags>

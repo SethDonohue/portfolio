@@ -1,116 +1,75 @@
 @import '_vars';
 
-a {
-    text-decoration: none;
-    color: black;
-    &:hover {
-      text-decoration: underline;
-      font-weight: bold;  
-    }
-}
-
 .header {
   .container-fluid {
     display: flex;
     flex-direction: column;
+    width: 100%;
     
-    @media only screen and (min-width: 600px) {
-      // height: 120px;
+    @media only screen and (min-width: $main-break) {
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;  
       flex-direction: row;
-      
+      width: 70%;
     }
     a {
       text-decoration: none;
     }
 
     h1 {
-      color: $primary-red;    
+      color: $primary-blue;    
     }
-  }
-
-  .logo {
-    align-items: center;
-    font-size: 50px;
-    text-align: center;
-    font-weight: 800;
-    margin-bottom: 10px;
-    
-    @media only screen and (min-width: 600px) {
-      margin-top: -10px;
-      margin-left: 20px;
-    }
-    span {
-      display: inline-block;
-      margin-right: .5em;
-      padding: 4px;
-      border: 4px solid #111;
-      color: #111;
-    }
-  }
-
-  .nav-items {
-    padding: 0;
-    border-bottom: 0;
-    margin-top: 5px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    
-    li {
-      margin-right: 16px;
-      display: block;
-      margin-bottom: 16px;
-      @media only screen and (min-width: 600px) {
-        display: inline-block;
-        margin-bottom: 0;
-      }
-    }
-    
-    @media only screen and (min-width: 600px) {
-      width: 70%;
-      margin-left: auto;    
-      flex-direction: row;
-      justify-content: flex-end;
-    }
-  }
-
-  .form-container {
-    display: flex;
-    justify-content: center;
-    // align-items: center;
-
-    @media only screen and (min-width: 600px) {
-      width: 100%;
-      height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-
-    .auth-form {
-      margin-right: 16px;
-      display: block;
-      margin-bottom: 16px;
-    }
-    
   }
 }
 
-.jumbotron {
-  padding-top: 20px;
+#svg-logo {
+  white-space: pre;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 10;
+  position: relative;
+  top: 1vw;
+  left: 0px;
+}
+
+
+.logo {
+  align-items: center;
+  font-size: 50px;
   text-align: center;
+  vertical-align: middle;
+  font-weight: 800;
+  margin: 1vw;
+  height: 100%;
+  transition-duration: $link-duration;
+  span {
+    display: block;
+  }
+
+  @media only screen and (min-width: $main-break) {
+    span {
+      display: inline;
+    }
+  }
+}
+
+  @keyframes welcome-animation {
+  from { opacity: 0; margin-right: -500px; }
+  to { opacity: 1; margin-right: 0; }
+}
+
+  #welcome-header {
+  font-size: 2.5em;
+  white-space: nowrap;
+}
+
+.jumbotron {
+  display: flex;
+  text-align: right;
   background-color: transparent;
+  justify-content: center;
   
-  @media only screen and (min-width: 600px) {
-    padding-top: 40px;
+  @media only screen and (min-width: $main-break) {
   }
   
   .scroll {
@@ -132,7 +91,7 @@ a {
   
   p {
     display: none;
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: $main-break) {
       display: block;    
     }
     font-size: 25px;
@@ -144,12 +103,38 @@ a {
   }
 }
 
+.typewriter h1 {
+  color: black;
+  text-align: right;
+  display: flex;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 40px auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .10em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+
+  @media only screen and (max-width:$main-break){
+    display: none;
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
 .grid {  
   margin-top: 2em;
-  img {
-    max-width: 200px;
-    height: auto;
-  }
 }
 
 .grid > * {
@@ -157,58 +142,78 @@ a {
   margin-top: 2em;
 }
 
+.intro {
+  display: inline-block;
+  width: 100%;
+
+  p {
+    text-align: right;
+    max-width: 75%;
+    float: right;
+    margin: 1vw 0 0 0;
+  }
+}
+
 @media screen and (min-width: 60em) {
  .grid {
   grid-template-rows: 20em;
   grid-gap: 2rem;
-  margin-top: 5em;
-  padding-bottom: 2em;
   grid-template-areas: 
     "left center right";
   }
-  .feature-desc {
-    padding: 0 17em;
-  }
-
-  
 }
 
-.feature-left {
+.summary {
+  margin: 0vw 0vw .5vw 1vw;
+  text-align: left;
+  max-width: 50vw;
+  font-size: $medium-text-size;
+  @media only screen and (max-width: $main-break) {
+    margin: 5px;
+    max-width: 100%;
+  }
+}
+
+.project {
+  padding: 20px;
+  background: white;
+  box-shadow: 3px 3px 5px 3px rgb(104, 104, 104);
+  border-radius: 5px;
+
+  h2 {
+    margin: 10px 0 10px 20px;
+  }
+}
+
+.project-left {
   grid-area: left;
   text-align: center;
-  p {
-    padding: 0 1em;
-  }
-  img {
-    width: 100%;
-  }
+  margin: $feature-margin;
 }
 
-.feature-center {
+.project-center {
   grid-area: center;
-  text-align: center;
-  p {
-    padding: 0 1em;
-  }
-  img {
-    width: 100%;
-  }
+  text-align: center;  
+  margin: $feature-margin;  
 }
 
-.feature-right {
+.project-right {
   grid-area: right;
   text-align: center;
-  p {
-    padding: 0 1em;
-  }
-  img {
-    width: 100%;
-  }
+  margin: $feature-margin;  
 }
 
 .footer {
-  margin-top: 3em;
-  margin-bottom: 5em;
+  margin-top: 1em;
+  margin-bottom: 3em;
   text-align: center;
+  font-size: 1.5em;
+  p {
+    transition-duration: $link-duration;
+    max-width: 75%;
+    margin: auto;
+    &:hover{
+      transform: $primary-link-translate;
+    }
+  }
 }
-
