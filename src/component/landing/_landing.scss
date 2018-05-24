@@ -1,32 +1,6 @@
 @import '_vars';
 
-
-.header {
-  .container-fluid {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    // height: 1000px;
-    
-    @media only screen and (min-width: 600px) {
-      // height: 120px;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;  
-      flex-direction: row;
-      
-    }
-    a {
-      text-decoration: none;
-    }
-
-    h1 {
-      color: $primary-blue;    
-    }
-  }
-}
-
-  #svg-logo {
+#svg-logo {
     white-space: pre;
     stroke: rgb(0, 0, 0);
     stroke-width: 10;
@@ -35,145 +9,31 @@
     left: 0px;
 }
 
-
-  .logo {
-    align-items: center;
-    font-size: 50px;
-    text-align: center;
-    vertical-align: middle;
-    font-weight: 800;
-    margin: 1vw;
-    height: 100%;
-    transition-duration: $link-duration;
-    
-    @media only screen and (min-width: 600px) {
-      // margin-top: -10px;
-      // margin-left: 20px;
-    }
-  }
-
-  // .logo:hover{
-  //   // transform: translate(15px, 0);
-  // }
-
-  @keyframes welcome-animation {
+@keyframes welcome-animation {
   from { opacity: 0; margin-right: -500px; }
   to { opacity: 1; margin-right: 0; }
 }
 
 
-  #welcome-header {
-  font-size: 2.5em;
-  // animation-name: welcome-animation;
-  // animation-duration: 3s;
-  white-space: nowrap;
-}
-
-//   .typewriter h1 {
-//   font-size: 2.5em;
-//   // animation-name: welcome-animation;
-//   // animation-duration: 3s;
-//   white-space: nowrap;
-// }
-
-  // .nav-items {
-  //   padding: 0;
-  //   border-bottom: 0;
-  //   margin-top: 5px;
-  //   list-style-type: none;
-  //   display: flex;
-  //   flex-direction: row;
-  //   flex-wrap: wrap;
-  //   align-items: center;
-  //   justify-content: center;
-  //   width: 100%;
-    
-  //   li {
-  //     margin-right: 16px;
-  //     display: block;
-  //     margin-bottom: 16px;
-  //     @media only screen and (min-width: 600px) {
-  //       display: inline-block;
-  //       margin-bottom: 0;
-  //     }
-  //   }
-    
-    // @media only screen and (min-width: 600px) {
-    //   width: 70%;
-    //   margin-left: auto;    
-    //   flex-direction: row;
-    //   justify-content: flex-end;
-    // }
-  // }
-
-//   .form-container {
-//     display: flex;
-//     justify-content: center;
-//     // align-items: center;
-
-//     @media only screen and (min-width: 600px) {
-//       width: 100%;
-//       height: 200px;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: space-between;
-//       align-items: flex-end;
-//     }
-
-//     .auth-form {
-//       margin-right: 16px;
-//       display: block;
-//       margin-bottom: 16px;
-//     }
-    
-//   }
-// }
-
-.jumbotron {
-  display: flex;
-  text-align: right;
-  background-color: transparent;
-  justify-content: center;
-  
-  @media only screen and (min-width: 600px) {
-    // padding-top: 40px;
-  }
-  
-  .scroll {
-    display: inline-block;
-    margin-top: 120px;
-    font-size: 40px;
-    color: #7a7a7a;
-    cursor: pointer;
-    &:hover {
-      color: #1a1a1a;
-    }
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-    font-size: 35px;
-    line-height: 1;
-  }
-  
-  p {
-    display: none;
-    @media only screen and (min-width: 600px) {
-      display: block;    
-    }
-    font-size: 25px;
-  }
-  
-  strong {
-    color: orange;
-    font-size: 120%;
+.scroll {
+  display: inline-block;
+  margin-top: 120px;
+  font-size: 40px;
+  color: #7a7a7a;
+  cursor: pointer;
+  &:hover {
+    color: #1a1a1a;
   }
 }
-
+  
+// Typewriter
 .typewriter h1 {
+  margin-bottom: 20px;
+  font-size: 35px;
+  // line-height: 1;
   color: black;
   text-align: right;
-  display: flex;
+  // display: flex;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -184,19 +44,17 @@
     blink-caret .5s step-end infinite;
 }
 
-/* The typing effect */
+// Typing effect
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
+// Typewriter cursor effect
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
-
-
 
 .grid {  
   margin-top: 2em;
@@ -208,14 +66,88 @@
 }
 
 .intro {
-  display: inline-block;
+  // border: solid green 1px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 100px);
+  align-items: center;
+  // justify-items: center;
   width: 100%;
+  background-color: transparent;
+  background-size: 100%;
+  // add div to have backgorund be a max-width
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-image: url('../../image/IntroSeth-Transparent.png');
 
-  p {
+  .header {
+    grid-column: 1 / 5;
+    grid-row: 1 / 3;
+    .container-fluid {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      // height: 1000px;
+      
+      @media only screen and (min-width: 600px) {
+        // height: 120px;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;  
+        flex-direction: row;
+        
+      }
+      a {
+        text-decoration: none;
+      }
+
+      h1 {
+        color: $primary-blue;    
+      }
+      .logo {
+        align-items: center;
+        font-size: 50px;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: 800;
+        margin: 1vw;
+        height: 100%;
+        transition-duration: $link-duration;
+        
+        @media only screen and (min-width: 600px) {
+          // margin-top: -10px;
+          // margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .jumbotron {
+    display: flex;
     text-align: right;
-    max-width: 75%;
-    float: right;
-    margin: 1vw 0 0 0;
+    background-color: transparent;
+    justify-content: center;
+    grid-column: 4/6;
+    grid-row: 3/4;
+  
+    @media only screen and (min-width: 600px) {
+      // padding-top: 40px;
+    }
+  }
+
+  #intro-p-thanks {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+
+  #intro-p-developed {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+
+  #intro-p-look {
+    grid-column: 2/3;
+    grid-row: 5/6;
   }
 }
 
