@@ -9,8 +9,27 @@ body {
   margin: 0 auto;
   // background: -webkit-linear-gradient(148deg, rgb(42, 155, 255), rgb(31, 52, 71));
   // background: linear-gradient(148deg, rgb(42, 155, 255), rgb(31, 52, 71));
-background-image: url(../image/topography.png);
-background-repeat: repeat;
+background-image: url(../image/3255213-pattern-wallpapers.jpg);
+// background-repeat: repeat;
+background-attachment: fixed;
+position: relative;
+ &:before {
+   content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right,
+      rgba(255, 255, 255, 0.0) 30%,
+      // These three 'smooth' out the fade.
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 1.0) 90%
+    );
+  }
 }
 
 a {

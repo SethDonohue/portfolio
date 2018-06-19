@@ -1,5 +1,8 @@
 @import '_vars';
 
+* {
+  border: 1px solid green;
+}
 #svg-logo {
     white-space: pre;
     stroke: rgb(0, 0, 0);
@@ -13,7 +16,6 @@
   from { opacity: 0; margin-right: -500px; }
   to { opacity: 1; margin-right: 0; }
 }
-
 
 .scroll {
   display: inline-block;
@@ -57,12 +59,6 @@
 }
 
 .intro {
-  // border: solid green 1px;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 100px);
-  align-items: center;
-  // justify-items: center;
   width: 100%;
   border: solid green 1px;
   
@@ -71,46 +67,40 @@
       content: " ";
       display: block;
       position: relative;
-      // left: 0;
-      // top: 0;
       grid-column: 3/7;
       grid-row: 1/6;
-      // justify-self: center;
-      // align-self: center;
-      // background-color: transparent;
       background-size: auto 500px;
-      // add div to have backgorund be a max-width
       background-position: center right;
       background-repeat: no-repeat;
-
-      background-image: url('../../image/IntroSeth-Transparent.png');
-      // width: 100%;
       height: 100%;
       max-width: 1080px;
       border: solid red 1px;
-      // background-repeat: no-repeat;
-      // background-size: cover;
-      // filter: grayscale(0.2) blur(1.5px); 
     }
-
 
   .header {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
+    font-size: 5vmin;
+
+    span {
+      display: block;
+      margin: 5vh;
+      font-family: 'Song Myung', serif;
+      font-weight: 700;
+    }
+
     .container-fluid {
       display: flex;
       flex-direction: column;
       width: 70%;
-      // height: 1000px;
       
       @media only screen and (min-width: 600px) {
-        // height: 120px;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;  
         flex-direction: row;
-        
       }
+
       a {
         text-decoration: none;
       }
@@ -118,6 +108,7 @@
       h1 {
         color: $primary-blue;    
       }
+
       .logo {
         align-items: center;
         font-size: 50px;
@@ -149,30 +140,86 @@
     }
   }
 
-  #intro-p-thanks {
-    grid-column: 4/5;
-    grid-row: 2/3;
-    text-align: left;
-    @media only screen and (max-width: 1250px) {
-      grid-column: 4/5;
+  .intro-content {
+    position: relative;
+    text-align: right;
+    display: block;
+
+    #intro-left {
+      text-align: left;
+      width: 50%;
+      float: left;
+      flex-grow: 1;
+      width: 45%;
+
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+
+      p {
+        font-size: 2.5vmin;
+        align-self: center;
+        font-family: 'Noto Serif', serif;
+
+      }
+
+      #left-p-1 {
+        justify-self: flex-start;
+        text-align: left;
+        grid-row: 1;
+        grid-column: 1/3;
+        font-style: italic;
+      }
+      
+      #left-p-2 {
+        justify-self: center;
+        text-align: center;
+        grid-row: 2;
+        grid-column: 2/4;
+        font-weight: 700;
+      }
+      
+      #left-p-3 {
+        justify-self: flex-end;
+        text-align: cen;
+        grid-row: 1;
+        grid-column: 3;
+        // font-family: 'Playfair Display', serif;
+
+        font-weight: 700;
+      }
+      
+      #left-p-4 {
+        justify-self: flex-start;
+        text-align: center;
+        grid-row: 3;
+        grid-column: 2/5;
+      }
     }
-  }
-  
-  #intro-p-developed {
-    grid-column: 4/5;
-    grid-row: 3/4;
-    text-align: left;
-    @media only screen and (max-width: 1250px) {
-      grid-column: 4/5;
-    }
-  }
-  
-  #intro-p-look {
-    grid-column: 4/5;
-    text-align: left;
-    grid-row: 5/6;
-    @media only screen and (max-width: 1250px) {
-      grid-column: 3/4;
+
+    #intro-right {
+      justify-self: flex-end;
+      max-height: 550px;
+      flex-grow: 1;
+      width: 50%;
+      display: inline-block;
+
+
+      img {
+        shape-outside: url(../../image/IntroSeth-TransparentCropped.png);
+        float: right;
+        position: relative;
+        max-height: inherit;
+        max-width: 100%;
+      }
+
+      #intro-p-right {
+        position: relative;
+        display: block;
+        text-align: right;
+        max-height: inherit;
+        font-size: 2.5vmin;
+      }
     }
   }
 }
@@ -182,10 +229,8 @@
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: 15% 1fr 15%;
-  // margin: 1vw, 5vw, 1vw, 5vw;
   margin: auto;
   max-width: 1400px;
-  // max-width: 1200px;
   @media only screen and (max-width: 1250px) {
     grid-template-columns: 1fr;
   }
